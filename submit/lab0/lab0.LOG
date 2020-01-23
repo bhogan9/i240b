@@ -1,0 +1,473 @@
+Script started on 2020-01-23 14:45:10-05:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="94" LINES="49"]
+bhogan9@g7-02:~/tmp/lab0$ ls ~/.ssh
+id_rsa	id_rsa.pub  known_hosts
+bhogan9@g7-02:~/tmp/lab0$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/bhogan9/.ssh/id_rsa): 
+/home/bhogan9/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/bhogan9/.ssh/id_rsa.
+Your public key has been saved in /home/bhogan9/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:x40s19w9WcLu/E1qS4wEebxMazRSsuG/otPBAnUvd2c bhogan9@g7-02
+The key's randomart image is:
++---[RSA 2048]----+
+|          o .    |
+|        ...B .   |
+|       . .*.* o .|
+|      .  o.&o*.oE|
+|       .S.*o@.o=.|
+|        .+oo *  .|
+|         o..o = .|
+|        .... ..+.|
+|        ..   .o.o|
++----[SHA256]-----+
+bhogan9@g7-02:~/tmp/lab0$ ssh-copy-id -i bhogan9@remote
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/bhogan9/.ssh/id_rsa.pub"
+The authenticity of host 'remote (128.226.114.205)' can't be established.
+ECDSA key fingerprint is SHA256:UEIh1TASIC96TC1hhxVbkVS0DrddNKHk7Q2nzgDCt+Y.
+Are you sure you want to continue connecting (yes/no)? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+bhogan9@remote's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'bhogan9@remote'"
+and check to make sure that only the key(s) you wanted were added.
+
+bhogan9@g7-02:~/tmp/lab0$ ssh 'bhogan9@remote'
+Warning: Permanently added the ECDSA host key for IP address '128.226.114.207' to the list of known hosts.
+Linux remote07 4.19.0-5-amd64 #1 SMP Debian 4.19.37-5 (2019-06-19) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue Sep 17 19:28:12 2019 from 149.125.59.186
+bhogan9@remote07:~$ logout
+Connection to remote closed.
+bhogan9@g7-02:~/tmp/lab0$ emacs ~/.progile[K[K[K[Kfile
+bhogan9@g7-02:~/tmp/lab0$ emacs ~/.b[K[K[K/.profile
+bhogan9@g7-02:~/tmp/lab0$ emacs ~/.profile[K[K[K[K[K[K[Kbashrc
+bhogan9@g7-02:~/tmp/lab0$ emacs ~/.bashrcprofile
+bhogan9@g7-02:~/tmp/lab0$ emacs ~/.profile[1Pbashrcprofile
+bhogan9@g7-02:~/tmp/lab0$ emacs ~/.profile[1P ~/.profile[1P ~/.profile[1P ~/.profile[1P ~/.profile[1P ~/.profiles ~/.profileo ~/.profileu ~/.profiler ~/.profilec ~/.profilee ~/.profile
+bash: /home/umrigar/cs240/bin/student.profile: Permission denied
+bhogan9@g7-02:~/tmp/lab0$ ssh://bhogan9@remote.cs.binghamton.edu/~umrigar/git-repos/cs240.git
+bash: ssh://bhogan9@remote.cs.binghamton.edu/~umrigar/git-repos/cs240.git: No such file or directory
+bhogan9@g7-02:~/tmp/lab0$ mkdir -p ~/projects
+bhogan9@g7-02:~/tmp/lab0$ cd ~/projects/
+bhogan9@g7-02:~/projects$ git clone ssh://bhogan9@remote.cs.binghm[Kamton.edu/~umrigar/git-repos/ cs240.git
+Cloning into 'cs240'...
+/home/bhogan9/.bashrc: line 1: /home/umrigar/cs240/bin/student.rc: Permission denied
+remote: Enumerating objects: 217, done.[K
+remote: Counting objects:   0% (1/217)   [Kremote: Counting objects:   1% (3/217)   [Kremote: Counting objects:   2% (5/217)   [Kremote: Counting objects:   3% (7/217)   [Kremote: Counting objects:   4% (9/217)   [Kremote: Counting objects:   5% (11/217)   [Kremote: Counting objects:   6% (14/217)   [Kremote: Counting objects:   7% (16/217)   [Kremote: Counting objects:   8% (18/217)   [Kremote: Counting objects:   9% (20/217)   [Kremote: Counting objects:  10% (22/217)   [Kremote: Counting objects:  11% (24/217)   [Kremote: Counting objects:  12% (27/217)   [Kremote: Counting objects:  13% (29/217)   [Kremote: Counting objects:  14% (31/217)   [Kremote: Counting objects:  15% (33/217)   [Kremote: Counting objects:  16% (35/217)   [Kremote: Counting objects:  17% (37/217)   [Kremote: Counting objects:  18% (40/217)   [Kremote: Counting objects:  19% (42/217)   [Kremote: Counting objects:  20% (44/217)   [Kremote: Counting objects:  21% (46/217)   [Kremote: Counting objects:  22% (48/217)   [Kremote: Counting objects:  23% (50/217)   [Kremote: Counting objects:  24% (53/217)   [Kremote: Counting objects:  25% (55/217)   [Kremote: Counting objects:  26% (57/217)   [Kremote: Counting objects:  27% (59/217)   [Kremote: Counting objects:  28% (61/217)   [Kremote: Counting objects:  29% (63/217)   [Kremote: Counting objects:  30% (66/217)   [Kremote: Counting objects:  31% (68/217)   [Kremote: Counting objects:  32% (70/217)   [Kremote: Counting objects:  33% (72/217)   [Kremote: Counting objects:  34% (74/217)   [Kremote: Counting objects:  35% (76/217)   [Kremote: Counting objects:  36% (79/217)   [Kremote: Counting objects:  37% (81/217)   [Kremote: Counting objects:  38% (83/217)   [Kremote: Counting objects:  39% (85/217)   [Kremote: Counting objects:  40% (87/217)   [Kremote: Counting objects:  41% (89/217)   [Kremote: Counting objects:  42% (92/217)   [Kremote: Counting objects:  43% (94/217)   [Kremote: Counting objects:  44% (96/217)   [Kremote: Counting objects:  45% (98/217)   [Kremote: Counting objects:  46% (100/217)   [Kremote: Counting objects:  47% (102/217)   [Kremote: Counting objects:  48% (105/217)   [Kremote: Counting objects:  49% (107/217)   [Kremote: Counting objects:  50% (109/217)   [Kremote: Counting objects:  51% (111/217)   [Kremote: Counting objects:  52% (113/217)   [Kremote: Counting objects:  53% (116/217)   [Kremote: Counting objects:  54% (118/217)   [Kremote: Counting objects:  55% (120/217)   [Kremote: Counting objects:  56% (122/217)   [Kremote: Counting objects:  57% (124/217)   [Kremote: Counting objects:  58% (126/217)   [Kremote: Counting objects:  59% (129/217)   [Kremote: Counting objects:  60% (131/217)   [Kremote: Counting objects:  61% (133/217)   [Kremote: Counting objects:  62% (135/217)   [Kremote: Counting objects:  63% (137/217)   [Kremote: Counting objects:  64% (139/217)   [Kremote: Counting objects:  65% (142/217)   [Kremote: Counting objects:  66% (144/217)   [Kremote: Counting objects:  67% (146/217)   [Kremote: Counting objects:  68% (148/217)   [Kremote: Counting objects:  69% (150/217)   [Kremote: Counting objects:  70% (152/217)   [Kremote: Counting objects:  71% (155/217)   [Kremote: Counting objects:  72% (157/217)   [Kremote: Counting objects:  73% (159/217)   [Kremote: Counting objects:  74% (161/217)   [Kremote: Counting objects:  75% (163/217)   [Kremote: Counting objects:  76% (165/217)   [Kremote: Counting objects:  77% (168/217)   [Kremote: Counting objects:  78% (170/217)   [Kremote: Counting objects:  79% (172/217)   [Kremote: Counting objects:  80% (174/217)   [Kremote: Counting objects:  81% (176/217)   [Kremote: Counting objects:  82% (178/217)   [Kremote: Counting objects:  83% (181/217)   [Kremote: Counting objects:  84% (183/217)   [Kremote: Counting objects:  85% (185/217)   [Kremote: Counting objects:  86% (187/217)   [Kremote: Counting objects:  87% (189/217)   [Kremote: Counting objects:  88% (191/217)   [Kremote: Counting objects:  89% (194/217)   [Kremote: Counting objects:  90% (196/217)   [Kremote: Counting objects:  91% (198/217)   [Kremote: Counting objects:  92% (200/217)   [Kremote: Counting objects:  93% (202/217)   [Kremote: Counting objects:  94% (204/217)   [Kremote: Counting objects:  95% (207/217)   [Kremote: Counting objects:  96% (209/217)   [Kremote: Counting objects:  97% (211/217)   [Kremote: Counting objects:  98% (213/217)   [Kremote: Counting objects:  99% (215/217)   [Kremote: Counting objects: 100% (217/217)   [Kremote: Counting objects: 100% (217/217), done.[K
+remote: Compressing objects:   0% (1/208)   [Kremote: Compressing objects:   1% (3/208)   [Kremote: Compressing objects:   2% (5/208)   [Kremote: Compressing objects:   3% (7/208)   [Kremote: Compressing objects:   4% (9/208)   [Kremote: Compressing objects:   5% (11/208)   [Kremote: Compressing objects:   6% (13/208)   [Kremote: Compressing objects:   7% (15/208)   [Kremote: Compressing objects:   8% (17/208)   [Kremote: Compressing objects:   9% (19/208)   [Kremote: Compressing objects:  10% (21/208)   [Kremote: Compressing objects:  11% (23/208)   [Kremote: Compressing objects:  12% (25/208)   [Kremote: Compressing objects:  13% (28/208)   [Kremote: Compressing objects:  14% (30/208)   [Kremote: Compressing objects:  15% (32/208)   [Kremote: Compressing objects:  16% (34/208)   [Kremote: Compressing objects:  17% (36/208)   [Kremote: Compressing objects:  18% (38/208)   [Kremote: Compressing objects:  19% (40/208)   [Kremote: Compressing objects:  20% (42/208)   [Kremote: Compressing objects:  21% (44/208)   [Kremote: Compressing objects:  22% (46/208)   [Kremote: Compressing objects:  23% (48/208)   [Kremote: Compressing objects:  24% (50/208)   [Kremote: Compressing objects:  25% (52/208)   [Kremote: Compressing objects:  26% (55/208)   [Kremote: Compressing objects:  27% (57/208)   [Kremote: Compressing objects:  28% (59/208)   [Kremote: Compressing objects:  29% (61/208)   [Kremote: Compressing objects:  30% (63/208)   [Kremote: Compressing objects:  31% (65/208)   [Kremote: Compressing objects:  32% (67/208)   [Kremote: Compressing objects:  33% (69/208)   [Kremote: Compressing objects:  34% (71/208)   [Kremote: Compressing objects:  35% (73/208)   [Kremote: Compressing objects:  36% (75/208)   [Kremote: Compressing objects:  37% (77/208)   [Kremote: Compressing objects:  38% (80/208)   [Kremote: Compressing objects:  39% (82/208)   [Kremote: Compressing objects:  40% (84/208)   [Kremote: Compressing objects:  41% (86/208)   [Kremote: Compressing objects:  42% (88/208)   [Kremote: Compressing objects:  43% (90/208)   [Kremote: Compressing objects:  44% (92/208)   [Kremote: Compressing objects:  45% (94/208)   [Kremote: Compressing objects:  46% (96/208)   [Kremote: Compressing objects:  47% (98/208)   [Kremote: Compressing objects:  48% (100/208)   [Kremote: Compressing objects:  49% (102/208)   [Kremote: Compressing objects:  50% (104/208)   [Kremote: Compressing objects:  51% (107/208)   [Kremote: Compressing objects:  52% (109/208)   [Kremote: Compressing objects:  53% (111/208)   [Kremote: Compressing objects:  54% (113/208)   [Kremote: Compressing objects:  55% (115/208)   [Kremote: Compressing objects:  56% (117/208)   [Kremote: Compressing objects:  57% (119/208)   [Kremote: Compressing objects:  58% (121/208)   [Kremote: Compressing objects:  59% (123/208)   [Kremote: Compressing objects:  60% (125/208)   [Kremote: Compressing objects:  61% (127/208)   [Kremote: Compressing objects:  62% (129/208)   [Kremote: Compressing objects:  63% (132/208)   [Kremote: Compressing objects:  64% (134/208)   [Kremote: Compressing objects:  65% (136/208)   [Kremote: Compressing objects:  66% (138/208)   [Kremote: Compressing objects:  67% (140/208)   [Kremote: Compressing objects:  68% (142/208)   [Kremote: Compressing objects:  69% (144/208)   [Kremote: Compressing objects:  70% (146/208)   [Kremote: Compressing objects:  71% (148/208)   [Kremote: Compressing objects:  72% (150/208)   [Kremote: Compressing objects:  73% (152/208)   [Kremote: Compressing objects:  74% (154/208)   [Kremote: Compressing objects:  75% (156/208)   [Kremote: Compressing objects:  76% (159/208)   [Kremote: Compressing objects:  77% (161/208)   [Kremote: Compressing objects:  78% (163/208)   [Kremote: Compressing objects:  79% (165/208)   [Kremote: Compressing objects:  80% (167/208)   [Kremote: Compressing objects:  81% (169/208)   [Kremote: Compressing objects:  82% (171/208)   [Kremote: Compressing objects:  83% (173/208)   [Kremote: Compressing objects:  84% (175/208)   [Kremote: Compressing objects:  85% (177/208)   [Kremote: Compressing objects:  86% (179/208)   [Kremote: Compressing objects:  87% (181/208)   [Kremote: Compressing objects:  88% (184/208)   [Kremote: Compressing objects:  89% (186/208)   [Kremote: Compressing objects:  90% (188/208)   [Kremote: Compressing objects:  91% (190/208)   [Kremote: Compressing objects:  92% (192/208)   [Kremote: Compressing objects:  93% (194/208)   [Kremote: Compressing objects:  94% (196/208)   [Kremote: Compressing objects:  95% (198/208)   [Kremote: Compressing objects:  96% (200/208)   [Kremote: Compressing objects:  97% (202/208)   [Kremote: Compressing objects:  98% (204/208)   [Kremote: Compressing objects:  99% (206/208)   [Kremote: Compressing objects: 100% (208/208)   [Kremote: Compressing objects: 100% (208/208), done.[K
+Receiving objects:   0% (1/217)   Receiving objects:   1% (3/217)   Receiving objects:   2% (5/217)   Receiving objects:   3% (7/217)   Receiving objects:   4% (9/217)   Receiving objects:   5% (11/217)   Receiving objects:   6% (14/217)   Receiving objects:   7% (16/217)   Receiving objects:   8% (18/217)   Receiving objects:   9% (20/217)   Receiving objects:  10% (22/217)   Receiving objects:  11% (24/217)   Receiving objects:  12% (27/217)   Receiving objects:  13% (29/217)   Receiving objects:  14% (31/217)   Receiving objects:  15% (33/217)   Receiving objects:  16% (35/217)   Receiving objects:  17% (37/217)   Receiving objects:  18% (40/217)   Receiving objects:  19% (42/217)   Receiving objects:  20% (44/217)   Receiving objects:  21% (46/217)   Receiving objects:  22% (48/217)   Receiving objects:  23% (50/217)   Receiving objects:  24% (53/217)   Receiving objects:  25% (55/217)   Receiving objects:  26% (57/217)   Receiving objects:  27% (59/217)   Receiving objects:  28% (61/217)   Receiving objects:  29% (63/217)   Receiving objects:  30% (66/217)   Receiving objects:  31% (68/217)   Receiving objects:  32% (70/217)   Receiving objects:  33% (72/217)   Receiving objects:  34% (74/217)   Receiving objects:  35% (76/217)   Receiving objects:  36% (79/217)   Receiving objects:  37% (81/217)   Receiving objects:  38% (83/217)   Receiving objects:  39% (85/217)   Receiving objects:  40% (87/217)   Receiving objects:  41% (89/217)   Receiving objects:  42% (92/217)   Receiving objects:  43% (94/217)   Receiving objects:  44% (96/217)   Receiving objects:  45% (98/217)   Receiving objects:  46% (100/217)   Receiving objects:  47% (102/217)   Receiving objects:  48% (105/217)   Receiving objects:  49% (107/217)   Receiving objects:  50% (109/217)   Receiving objects:  51% (111/217)   Receiving objects:  52% (113/217)   Receiving objects:  53% (116/217)   Receiving objects:  54% (118/217)   Receiving objects:  55% (120/217)   Receiving objects:  56% (122/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  57% (124/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  58% (126/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  59% (129/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  60% (131/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  61% (133/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  62% (135/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  63% (137/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  64% (139/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  65% (142/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  66% (144/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  67% (146/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  68% (148/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  69% (150/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  70% (152/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  71% (155/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  72% (157/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  73% (159/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  74% (161/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  75% (163/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  76% (165/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  77% (168/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  78% (170/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  79% (172/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  80% (174/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  81% (176/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  82% (178/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  83% (181/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  84% (183/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  85% (185/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  86% (187/217), 2.80 MiB | 5.59 MiB/s   remote: Total 217 (delta 92), reused 0 (delta 0)[K
+Receiving objects:  87% (189/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  88% (191/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  89% (194/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  90% (196/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  91% (198/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  92% (200/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  93% (202/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  94% (204/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  95% (207/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  96% (209/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  97% (211/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  98% (213/217), 2.80 MiB | 5.59 MiB/s   Receiving objects:  99% (215/217), 2.80 MiB | 5.59 MiB/s   Receiving objects: 100% (217/217), 2.80 MiB | 5.59 MiB/s   Receiving objects: 100% (217/217), 3.07 MiB | 5.85 MiB/s, done.
+Resolving deltas:   0% (0/92)   Resolving deltas:   2% (2/92)   Resolving deltas:   3% (3/92)   Resolving deltas:   4% (4/92)   Resolving deltas:   5% (5/92)   Resolving deltas:  10% (10/92)   Resolving deltas:  15% (14/92)   Resolving deltas:  30% (28/92)   Resolving deltas:  35% (33/92)   Resolving deltas:  36% (34/92)   Resolving deltas:  38% (35/92)   Resolving deltas:  42% (39/92)   Resolving deltas:  45% (42/92)   Resolving deltas:  47% (44/92)   Resolving deltas:  52% (48/92)   Resolving deltas:  53% (49/92)   Resolving deltas:  54% (50/92)   Resolving deltas:  55% (51/92)   Resolving deltas:  56% (52/92)   Resolving deltas:  57% (53/92)   Resolving deltas:  60% (56/92)   Resolving deltas:  64% (59/92)   Resolving deltas:  65% (60/92)   Resolving deltas:  72% (67/92)   Resolving deltas:  75% (69/92)   Resolving deltas:  81% (75/92)   Resolving deltas:  82% (76/92)   Resolving deltas:  83% (77/92)   Resolving deltas:  84% (78/92)   Resolving deltas:  85% (79/92)   Resolving deltas:  88% (81/92)   Resolving deltas:  97% (90/92)   Resolving deltas: 100% (92/92)   Resolving deltas: 100% (92/92), done.
+bhogan9@g7-02:~/projects$ cd ~
+bhogan9@g7-02:~$ ln -s projects/cs240
+bhogan9@g7-02:~$ ln -s projects/cs240 .
+ln: failed to create symbolic link './cs240': File exists
+bhogan9@g7-02:~$ cd projects/
+bhogan9@g7-02:~/projects$ ls
+cs240
+bhogan9@g7-02:~/projects$ rm cs240
+rm: cannot remove 'cs240': Is a directory
+bhogan9@g7-02:~/projects$ deldir
+bash: deldir: command not found
+bhogan9@g7-02:~/projects$ rm -d cs240
+rm: cannot remove 'cs240': Directory not empty
+bhogan9@g7-02:~/projects$ rm -d cs240[1P cs240r cs240
+rm: remove write-protected regular file 'cs240/.git/objects/pack/pack-2420daf969e75135e9fe901ffbd888afbf354217.pack'? y
+rm: remove write-protected regular file 'cs240/.git/objects/pack/pack-2420daf969e75135e9fe901ffbd888afbf354217.idx'? y
+bhogan9@g7-02:~/projects$ y
+bash: y: command not found
+bhogan9@g7-02:~/projects$ yls
+bash: yls: command not found
+bhogan9@g7-02:~/projects$ ls
+bhogan9@g7-02:~/projects$ cd ..
+bhogan9@g7-02:~$ cd ..[3Plsyls[Krm -r cs240d[C[C[C[C[C[C[5Pdeldirrm cs240ls[Kcd projects/ln -s projects/cs240 .
+ln: failed to create symbolic link './cs240': File exists
+bhogan9@g7-02:~$ ls
+Arduino  cs220	Desktop    Downloads  Music	projects  Templates  tmp
+cs120	 cs240	Documents  git-repos  Pictures	Public	  testing    Videos
+bhogan9@g7-02:~$ cd tm[K[K[K[Kp[K[Klsn -s projects/cs240 .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ..[K[3Plsyls[Krm -r cs240d[C[C[C[C[C[C[5Pdeldirrm cs240ls[Kcd projects/ln -s projects/cs240 .[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ~[Kgit clone ssh://bhogan9@remote.cs.binghamton.edu/~umrigar/git-repos/cs240.git [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ~/projects/[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir -p ~/projects[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cssh://bhogan9@remote.cs.binghamton.edu/~umrigar/git-repos/cs240.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cource ~/.profile[K[1Pemacs[C[C[C[C[C[C[C[C[C[C[C[1@source[C[C[C[C[C[C[C[C[C[C[Csh://bhogan9@remote.cs.binghamton.edu/~umrigar/git-repos/cs240.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir -p ~/projects[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Pcd ~/projects/
+bhogan9@g7-02:~/projects$ cd ~/projects/ls[Kn -s projects/cs240 .cd ..[K[3Plsyls[Krm -r cs240d[C[C[C[C[C[C[5Pdeldirrm cs240ls[Kcd projects/ln -s projects/cs240 .[Kcd ~[Kgit clone ssh://bhogan9@remote.cs.binghamton.edu/~umrigar/git-repos/cs240.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ~/projects/[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit clone ssh://bhogan9@remote.cs.binghamton.edu/~umrigar/git-repos/cs240.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ~/projects/[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit clone ssh://bhogan9@remote.cs.binghamton.edu/~umrigar/git-repos/cs240.git
+Cloning into 'cs240'...
+/home/bhogan9/.bashrc: line 1: /home/umrigar/cs240/bin/student.rc: Permission denied
+remote: Enumerating objects: 217, done.[K
+remote: Counting objects:   0% (1/217)   [Kremote: Counting objects:   1% (3/217)   [Kremote: Counting objects:   2% (5/217)   [Kremote: Counting objects:   3% (7/217)   [Kremote: Counting objects:   4% (9/217)   [Kremote: Counting objects:   5% (11/217)   [Kremote: Counting objects:   6% (14/217)   [Kremote: Counting objects:   7% (16/217)   [Kremote: Counting objects:   8% (18/217)   [Kremote: Counting objects:   9% (20/217)   [Kremote: Counting objects:  10% (22/217)   [Kremote: Counting objects:  11% (24/217)   [Kremote: Counting objects:  12% (27/217)   [Kremote: Counting objects:  13% (29/217)   [Kremote: Counting objects:  14% (31/217)   [Kremote: Counting objects:  15% (33/217)   [Kremote: Counting objects:  16% (35/217)   [Kremote: Counting objects:  17% (37/217)   [Kremote: Counting objects:  18% (40/217)   [Kremote: Counting objects:  19% (42/217)   [Kremote: Counting objects:  20% (44/217)   [Kremote: Counting objects:  21% (46/217)   [Kremote: Counting objects:  22% (48/217)   [Kremote: Counting objects:  23% (50/217)   [Kremote: Counting objects:  24% (53/217)   [Kremote: Counting objects:  25% (55/217)   [Kremote: Counting objects:  26% (57/217)   [Kremote: Counting objects:  27% (59/217)   [Kremote: Counting objects:  28% (61/217)   [Kremote: Counting objects:  29% (63/217)   [Kremote: Counting objects:  30% (66/217)   [Kremote: Counting objects:  31% (68/217)   [Kremote: Counting objects:  32% (70/217)   [Kremote: Counting objects:  33% (72/217)   [Kremote: Counting objects:  34% (74/217)   [Kremote: Counting objects:  35% (76/217)   [Kremote: Counting objects:  36% (79/217)   [Kremote: Counting objects:  37% (81/217)   [Kremote: Counting objects:  38% (83/217)   [Kremote: Counting objects:  39% (85/217)   [Kremote: Counting objects:  40% (87/217)   [Kremote: Counting objects:  41% (89/217)   [Kremote: Counting objects:  42% (92/217)   [Kremote: Counting objects:  43% (94/217)   [Kremote: Counting objects:  44% (96/217)   [Kremote: Counting objects:  45% (98/217)   [Kremote: Counting objects:  46% (100/217)   [Kremote: Counting objects:  47% (102/217)   [Kremote: Counting objects:  48% (105/217)   [Kremote: Counting objects:  49% (107/217)   [Kremote: Counting objects:  50% (109/217)   [Kremote: Counting objects:  51% (111/217)   [Kremote: Counting objects:  52% (113/217)   [Kremote: Counting objects:  53% (116/217)   [Kremote: Counting objects:  54% (118/217)   [Kremote: Counting objects:  55% (120/217)   [Kremote: Counting objects:  56% (122/217)   [Kremote: Counting objects:  57% (124/217)   [Kremote: Counting objects:  58% (126/217)   [Kremote: Counting objects:  59% (129/217)   [Kremote: Counting objects:  60% (131/217)   [Kremote: Counting objects:  61% (133/217)   [Kremote: Counting objects:  62% (135/217)   [Kremote: Counting objects:  63% (137/217)   [Kremote: Counting objects:  64% (139/217)   [Kremote: Counting objects:  65% (142/217)   [Kremote: Counting objects:  66% (144/217)   [Kremote: Counting objects:  67% (146/217)   [Kremote: Counting objects:  68% (148/217)   [Kremote: Counting objects:  69% (150/217)   [Kremote: Counting objects:  70% (152/217)   [Kremote: Counting objects:  71% (155/217)   [Kremote: Counting objects:  72% (157/217)   [Kremote: Counting objects:  73% (159/217)   [Kremote: Counting objects:  74% (161/217)   [Kremote: Counting objects:  75% (163/217)   [Kremote: Counting objects:  76% (165/217)   [Kremote: Counting objects:  77% (168/217)   [Kremote: Counting objects:  78% (170/217)   [Kremote: Counting objects:  79% (172/217)   [Kremote: Counting objects:  80% (174/217)   [Kremote: Counting objects:  81% (176/217)   [Kremote: Counting objects:  82% (178/217)   [Kremote: Counting objects:  83% (181/217)   [Kremote: Counting objects:  84% (183/217)   [Kremote: Counting objects:  85% (185/217)   [Kremote: Counting objects:  86% (187/217)   [Kremote: Counting objects:  87% (189/217)   [Kremote: Counting objects:  88% (191/217)   [Kremote: Counting objects:  89% (194/217)   [Kremote: Counting objects:  90% (196/217)   [Kremote: Counting objects:  91% (198/217)   [Kremote: Counting objects:  92% (200/217)   [Kremote: Counting objects:  93% (202/217)   [Kremote: Counting objects:  94% (204/217)   [Kremote: Counting objects:  95% (207/217)   [Kremote: Counting objects:  96% (209/217)   [Kremote: Counting objects:  97% (211/217)   [Kremote: Counting objects:  98% (213/217)   [Kremote: Counting objects:  99% (215/217)   [Kremote: Counting objects: 100% (217/217)   [Kremote: Counting objects: 100% (217/217), done.[K
+remote: Compressing objects:   0% (1/208)   [Kremote: Compressing objects:   1% (3/208)   [Kremote: Compressing objects:   2% (5/208)   [Kremote: Compressing objects:   3% (7/208)   [Kremote: Compressing objects:   4% (9/208)   [Kremote: Compressing objects:   5% (11/208)   [Kremote: Compressing objects:   6% (13/208)   [Kremote: Compressing objects:   7% (15/208)   [Kremote: Compressing objects:   8% (17/208)   [Kremote: Compressing objects:   9% (19/208)   [Kremote: Compressing objects:  10% (21/208)   [Kremote: Compressing objects:  11% (23/208)   [Kremote: Compressing objects:  12% (25/208)   [Kremote: Compressing objects:  13% (28/208)   [Kremote: Compressing objects:  14% (30/208)   [Kremote: Compressing objects:  15% (32/208)   [Kremote: Compressing objects:  16% (34/208)   [Kremote: Compressing objects:  17% (36/208)   [Kremote: Compressing objects:  18% (38/208)   [Kremote: Compressing objects:  19% (40/208)   [Kremote: Compressing objects:  20% (42/208)   [Kremote: Compressing objects:  21% (44/208)   [Kremote: Compressing objects:  22% (46/208)   [Kremote: Compressing objects:  23% (48/208)   [Kremote: Compressing objects:  24% (50/208)   [Kremote: Compressing objects:  25% (52/208)   [Kremote: Compressing objects:  26% (55/208)   [Kremote: Compressing objects:  27% (57/208)   [Kremote: Compressing objects:  28% (59/208)   [Kremote: Compressing objects:  29% (61/208)   [Kremote: Compressing objects:  30% (63/208)   [Kremote: Compressing objects:  31% (65/208)   [Kremote: Compressing objects:  32% (67/208)   [Kremote: Compressing objects:  33% (69/208)   [Kremote: Compressing objects:  34% (71/208)   [Kremote: Compressing objects:  35% (73/208)   [Kremote: Compressing objects:  36% (75/208)   [Kremote: Compressing objects:  37% (77/208)   [Kremote: Compressing objects:  38% (80/208)   [Kremote: Compressing objects:  39% (82/208)   [Kremote: Compressing objects:  40% (84/208)   [Kremote: Compressing objects:  41% (86/208)   [Kremote: Compressing objects:  42% (88/208)   [Kremote: Compressing objects:  43% (90/208)   [Kremote: Compressing objects:  44% (92/208)   [Kremote: Compressing objects:  45% (94/208)   [Kremote: Compressing objects:  46% (96/208)   [Kremote: Compressing objects:  47% (98/208)   [Kremote: Compressing objects:  48% (100/208)   [Kremote: Compressing objects:  49% (102/208)   [Kremote: Compressing objects:  50% (104/208)   [Kremote: Compressing objects:  51% (107/208)   [Kremote: Compressing objects:  52% (109/208)   [Kremote: Compressing objects:  53% (111/208)   [Kremote: Compressing objects:  54% (113/208)   [Kremote: Compressing objects:  55% (115/208)   [Kremote: Compressing objects:  56% (117/208)   [Kremote: Compressing objects:  57% (119/208)   [Kremote: Compressing objects:  58% (121/208)   [Kremote: Compressing objects:  59% (123/208)   [Kremote: Compressing objects:  60% (125/208)   [Kremote: Compressing objects:  61% (127/208)   [Kremote: Compressing objects:  62% (129/208)   [Kremote: Compressing objects:  63% (132/208)   [Kremote: Compressing objects:  64% (134/208)   [Kremote: Compressing objects:  65% (136/208)   [Kremote: Compressing objects:  66% (138/208)   [Kremote: Compressing objects:  67% (140/208)   [Kremote: Compressing objects:  68% (142/208)   [Kremote: Compressing objects:  69% (144/208)   [Kremote: Compressing objects:  70% (146/208)   [Kremote: Compressing objects:  71% (148/208)   [Kremote: Compressing objects:  72% (150/208)   [Kremote: Compressing objects:  73% (152/208)   [Kremote: Compressing objects:  74% (154/208)   [Kremote: Compressing objects:  75% (156/208)   [Kremote: Compressing objects:  76% (159/208)   [Kremote: Compressing objects:  77% (161/208)   [Kremote: Compressing objects:  78% (163/208)   [Kremote: Compressing objects:  79% (165/208)   [Kremote: Compressing objects:  80% (167/208)   [Kremote: Compressing objects:  81% (169/208)   [Kremote: Compressing objects:  82% (171/208)   [Kremote: Compressing objects:  83% (173/208)   [Kremote: Compressing objects:  84% (175/208)   [Kremote: Compressing objects:  85% (177/208)   [Kremote: Compressing objects:  86% (179/208)   [Kremote: Compressing objects:  87% (181/208)   [Kremote: Compressing objects:  88% (184/208)   [Kremote: Compressing objects:  89% (186/208)   [Kremote: Compressing objects:  90% (188/208)   [Kremote: Compressing objects:  91% (190/208)   [Kremote: Compressing objects:  92% (192/208)   [Kremote: Compressing objects:  93% (194/208)   [Kremote: Compressing objects:  94% (196/208)   [Kremote: Compressing objects:  95% (198/208)   [Kremote: Compressing objects:  96% (200/208)   [Kremote: Compressing objects:  97% (202/208)   [Kremote: Compressing objects:  98% (204/208)   [Kremote: Compressing objects:  99% (206/208)   [Kremote: Compressing objects: 100% (208/208)   [Kremote: Compressing objects: 100% (208/208), done.[K
+Receiving objects:   0% (1/217)   Receiving objects:   1% (3/217)   Receiving objects:   2% (5/217)   Receiving objects:   3% (7/217)   Receiving objects:   4% (9/217)   Receiving objects:   5% (11/217)   Receiving objects:   6% (14/217)   Receiving objects:   7% (16/217)   Receiving objects:   8% (18/217)   Receiving objects:   9% (20/217)   Receiving objects:  10% (22/217)   Receiving objects:  11% (24/217)   Receiving objects:  12% (27/217)   Receiving objects:  13% (29/217)   Receiving objects:  14% (31/217)   Receiving objects:  15% (33/217)   Receiving objects:  16% (35/217)   Receiving objects:  17% (37/217)   Receiving objects:  18% (40/217)   Receiving objects:  19% (42/217)   Receiving objects:  20% (44/217)   Receiving objects:  21% (46/217)   Receiving objects:  22% (48/217)   Receiving objects:  23% (50/217)   Receiving objects:  24% (53/217)   Receiving objects:  25% (55/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  26% (57/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  27% (59/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  28% (61/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  29% (63/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  30% (66/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  31% (68/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  32% (70/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  33% (72/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  34% (74/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  35% (76/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  36% (79/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  37% (81/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  38% (83/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  39% (85/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  40% (87/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  41% (89/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  42% (92/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  43% (94/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  44% (96/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  45% (98/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  46% (100/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  47% (102/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  48% (105/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  49% (107/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  50% (109/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  51% (111/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  52% (113/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  53% (116/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  54% (118/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  55% (120/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  56% (122/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  57% (124/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  58% (126/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  59% (129/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  60% (131/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  61% (133/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  62% (135/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  63% (137/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  64% (139/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  65% (142/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  66% (144/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  67% (146/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  68% (148/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  69% (150/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  70% (152/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  71% (155/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  72% (157/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  73% (159/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  74% (161/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  75% (163/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  76% (165/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  77% (168/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  78% (170/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  79% (172/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  80% (174/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  81% (176/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  82% (178/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  83% (181/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  84% (183/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  85% (185/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  86% (187/217), 2.22 MiB | 4.42 MiB/s   remote: Total 217 (delta 92), reused 0 (delta 0)
+Receiving objects:  87% (189/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  88% (191/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  89% (194/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  90% (196/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  91% (198/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  92% (200/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  93% (202/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  94% (204/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  95% (207/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  96% (209/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  97% (211/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  98% (213/217), 2.22 MiB | 4.42 MiB/s   Receiving objects:  99% (215/217), 2.22 MiB | 4.42 MiB/s   Receiving objects: 100% (217/217), 2.22 MiB | 4.42 MiB/s   Receiving objects: 100% (217/217), 3.07 MiB | 5.15 MiB/s, done.
+Resolving deltas:   0% (0/92)   Resolving deltas:   2% (2/92)   Resolving deltas:   3% (3/92)   Resolving deltas:   4% (4/92)   Resolving deltas:   6% (6/92)   Resolving deltas:   9% (9/92)   Resolving deltas:  14% (13/92)   Resolving deltas:  29% (27/92)   Resolving deltas:  34% (32/92)   Resolving deltas:  38% (35/92)   Resolving deltas:  41% (38/92)   Resolving deltas:  42% (39/92)   Resolving deltas:  45% (42/92)   Resolving deltas:  47% (44/92)   Resolving deltas:  52% (48/92)   Resolving deltas:  53% (49/92)   Resolving deltas:  54% (50/92)   Resolving deltas:  55% (51/92)   Resolving deltas:  56% (52/92)   Resolving deltas:  57% (53/92)   Resolving deltas:  60% (56/92)   Resolving deltas:  64% (59/92)   Resolving deltas:  65% (60/92)   Resolving deltas:  72% (67/92)   Resolving deltas:  75% (69/92)   Resolving deltas:  81% (75/92)   Resolving deltas:  82% (76/92)   Resolving deltas:  83% (77/92)   Resolving deltas:  84% (78/92)   Resolving deltas:  85% (79/92)   Resolving deltas:  88% (81/92)   Resolving deltas:  97% (90/92)   Resolving deltas: 100% (92/92)   Resolving deltas: 100% (92/92), done.
+bhogan9@g7-02:~/projects$ cd ~
+bhogan9@g7-02:~$ ln -s projects/cs240 .
+ln: failed to create symbolic link './cs240': File exists
+bhogan9@g7-02:~$ cd ~/git-repos/cs240
+bash: cd: /home/bhogan9/git-repos/cs240: No such file or directory
+bhogan9@g7-02:~$ cd git-repos/
+bhogan9@g7-02:~/git-repos$ ls
+cs220  i220a
+bhogan9@g7-02:~/git-repos$ git pull
+fatal: not a git repository (or any parent up to mount point /import)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+bhogan9@g7-02:~/git-repos$ clear
+[H[2J[3Jbhogan9@g7-02:~/git-repos$ cd ..
+bhogan9@g7-02:~$ ls
+Arduino  cs220	Desktop    Downloads  Music	projects  Templates  tmp
+cs120	 cs240	Documents  git-repos  Pictures	Public	  testing    Videos
+bhogan9@g7-02:~$ cd[K[Kcd projects/
+bhogan9@g7-02:~/projects$ ls
+cs240
+bhogan9@g7-02:~/projects$ git clone ssh://bhogan9@binghamton[K[K[K[K[K[K[K[K[K[Kremote.cs.binghamton.edu/~umrigar/git-repos/ cs240.git
+fatal: destination path 'cs240' already exists and is not an empty directory.
+bhogan9@g7-02:~/projects$ ls
+cs240
+bhogan9@g7-02:~/projects$ cd cs240/
+bhogan9@g7-02:~/projects/cs240$ ls
+announce.html  assets  exams-quizzes  hws	  index.umt  misc      README.md  umt.make
+announce.umt   docs    exercises      index.html  labs	     projects  slides
+bhogan9@g7-02:~/projects/cs240$ cd ..
+bhogan9@g7-02:~/projects$ cd ~
+bhogan9@g7-02:~$ ln -s projects/240[K[K[Kcs240 .
+ln: failed to create symbolic link './cs240': File exists
+bhogan9@g7-02:~$ ln -s projects/cs240 .[1@f[1@n
+bhogan9@g7-02:~$ cd ~/git-repos/cs240
+bash: cd: /home/bhogan9/git-repos/cs240: No such file or directory
+bhogan9@g7-02:~$ git pull
+fatal: not a git repository (or any parent up to mount point /import)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+bhogan9@g7-02:~$ git pullcd ~/git-repos/cs240
+bash: cd: /home/bhogan9/git-repos/cs240: No such file or directory
+bhogan9@g7-02:~$ ls
+Arduino  cs220	Desktop    Downloads  Music	projects  Templates  tmp
+cs120	 cs240	Documents  git-repos  Pictures	Public	  testing    Videos
+bhogan9@g7-02:~$ cd git-repos/
+bhogan9@g7-02:~/git-repos$ ls
+cs220  i220a
+bhogan9@g7-02:~/git-repos$ lscd git-repos/ls[Kcd ~/git-repos/cs240[12Pgit pullcd ~/git-repos/cs240[12Pgit pullcd ~/git-repos/cs240ls[Kcd git-repos/ls[K[K[5P(reverse-i-search)`':[Cc': cd git-repos/o': ssh-copy-id -i bhogan9@remote[C[8@failed reverse-i-search)`col[C[C[C[C[C[C[C[1@o[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[6Preverse-i-search)`co': git commit -m "submitted lab 5"[1P[C[C[C[C[C[C[C[C[8@failed reverse-i-search)`cl[C[C[C[C[C[C[C[1@o[C[C[C[C[C[C[C[5Pbhogan9@g7-02:~/git-repos$[C[C[C[C[Cpush[Kstatus[2Ppush[2Plogoutcd git-repos/ls[Kcd i220a/[1Pgit pull[3Pcd ..cs220/[1Pgit pullls[Kcd projects/[K[K[K[K[K[K[K[K[K[K[K[Kls
+cs220  i220a
+bhogan9@g7-02:~/git-repos$ [5P(reverse-i-search)`':[Cc': cd git-repos/l': git clone ssh://bhogan9@remote.cs.binghamton.edu/~umrigar/git-repos/cs240.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co': git clone ssh://bhogan9@remote.cs.binghamton.edu/~umrigar/git-repos/cs240.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbhogan9@g7-02:~/git-repos$ git clone ssh://bhogan9@remote.cs.binghamton.edu/~umrigar/git-repos/cs240.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+Cloning into 'cs240'...
+/home/bhogan9/.bashrc: line 1: /home/umrigar/cs240/bin/student.rc: Permission denied
+remote: Enumerating objects: 217, done.[K
+remote: Counting objects:   0% (1/217)   [Kremote: Counting objects:   1% (3/217)   [Kremote: Counting objects:   2% (5/217)   [Kremote: Counting objects:   3% (7/217)   [Kremote: Counting objects:   4% (9/217)   [Kremote: Counting objects:   5% (11/217)   [Kremote: Counting objects:   6% (14/217)   [Kremote: Counting objects:   7% (16/217)   [Kremote: Counting objects:   8% (18/217)   [Kremote: Counting objects:   9% (20/217)   [Kremote: Counting objects:  10% (22/217)   [Kremote: Counting objects:  11% (24/217)   [Kremote: Counting objects:  12% (27/217)   [Kremote: Counting objects:  13% (29/217)   [Kremote: Counting objects:  14% (31/217)   [Kremote: Counting objects:  15% (33/217)   [Kremote: Counting objects:  16% (35/217)   [Kremote: Counting objects:  17% (37/217)   [Kremote: Counting objects:  18% (40/217)   [Kremote: Counting objects:  19% (42/217)   [Kremote: Counting objects:  20% (44/217)   [Kremote: Counting objects:  21% (46/217)   [Kremote: Counting objects:  22% (48/217)   [Kremote: Counting objects:  23% (50/217)   [Kremote: Counting objects:  24% (53/217)   [Kremote: Counting objects:  25% (55/217)   [Kremote: Counting objects:  26% (57/217)   [Kremote: Counting objects:  27% (59/217)   [Kremote: Counting objects:  28% (61/217)   [Kremote: Counting objects:  29% (63/217)   [Kremote: Counting objects:  30% (66/217)   [Kremote: Counting objects:  31% (68/217)   [Kremote: Counting objects:  32% (70/217)   [Kremote: Counting objects:  33% (72/217)   [Kremote: Counting objects:  34% (74/217)   [Kremote: Counting objects:  35% (76/217)   [Kremote: Counting objects:  36% (79/217)   [Kremote: Counting objects:  37% (81/217)   [Kremote: Counting objects:  38% (83/217)   [Kremote: Counting objects:  39% (85/217)   [Kremote: Counting objects:  40% (87/217)   [Kremote: Counting objects:  41% (89/217)   [Kremote: Counting objects:  42% (92/217)   [Kremote: Counting objects:  43% (94/217)   [Kremote: Counting objects:  44% (96/217)   [Kremote: Counting objects:  45% (98/217)   [Kremote: Counting objects:  46% (100/217)   [Kremote: Counting objects:  47% (102/217)   [Kremote: Counting objects:  48% (105/217)   [Kremote: Counting objects:  49% (107/217)   [Kremote: Counting objects:  50% (109/217)   [Kremote: Counting objects:  51% (111/217)   [Kremote: Counting objects:  52% (113/217)   [Kremote: Counting objects:  53% (116/217)   [Kremote: Counting objects:  54% (118/217)   [Kremote: Counting objects:  55% (120/217)   [Kremote: Counting objects:  56% (122/217)   [Kremote: Counting objects:  57% (124/217)   [Kremote: Counting objects:  58% (126/217)   [Kremote: Counting objects:  59% (129/217)   [Kremote: Counting objects:  60% (131/217)   [Kremote: Counting objects:  61% (133/217)   [Kremote: Counting objects:  62% (135/217)   [Kremote: Counting objects:  63% (137/217)   [Kremote: Counting objects:  64% (139/217)   [Kremote: Counting objects:  65% (142/217)   [Kremote: Counting objects:  66% (144/217)   [Kremote: Counting objects:  67% (146/217)   [Kremote: Counting objects:  68% (148/217)   [Kremote: Counting objects:  69% (150/217)   [Kremote: Counting objects:  70% (152/217)   [Kremote: Counting objects:  71% (155/217)   [Kremote: Counting objects:  72% (157/217)   [Kremote: Counting objects:  73% (159/217)   [Kremote: Counting objects:  74% (161/217)   [Kremote: Counting objects:  75% (163/217)   [Kremote: Counting objects:  76% (165/217)   [Kremote: Counting objects:  77% (168/217)   [Kremote: Counting objects:  78% (170/217)   [Kremote: Counting objects:  79% (172/217)   [Kremote: Counting objects:  80% (174/217)   [Kremote: Counting objects:  81% (176/217)   [Kremote: Counting objects:  82% (178/217)   [Kremote: Counting objects:  83% (181/217)   [Kremote: Counting objects:  84% (183/217)   [Kremote: Counting objects:  85% (185/217)   [Kremote: Counting objects:  86% (187/217)   [Kremote: Counting objects:  87% (189/217)   [Kremote: Counting objects:  88% (191/217)   [Kremote: Counting objects:  89% (194/217)   [Kremote: Counting objects:  90% (196/217)   [Kremote: Counting objects:  91% (198/217)   [Kremote: Counting objects:  92% (200/217)   [Kremote: Counting objects:  93% (202/217)   [Kremote: Counting objects:  94% (204/217)   [Kremote: Counting objects:  95% (207/217)   [Kremote: Counting objects:  96% (209/217)   [Kremote: Counting objects:  97% (211/217)   [Kremote: Counting objects:  98% (213/217)   [Kremote: Counting objects:  99% (215/217)   [Kremote: Counting objects: 100% (217/217)   [Kremote: Counting objects: 100% (217/217), done.[K
+remote: Compressing objects:   0% (1/208)   [Kremote: Compressing objects:   1% (3/208)   [Kremote: Compressing objects:   2% (5/208)   [Kremote: Compressing objects:   3% (7/208)   [Kremote: Compressing objects:   4% (9/208)   [Kremote: Compressing objects:   5% (11/208)   [Kremote: Compressing objects:   6% (13/208)   [Kremote: Compressing objects:   7% (15/208)   [Kremote: Compressing objects:   8% (17/208)   [Kremote: Compressing objects:   9% (19/208)   [Kremote: Compressing objects:  10% (21/208)   [Kremote: Compressing objects:  11% (23/208)   [Kremote: Compressing objects:  12% (25/208)   [Kremote: Compressing objects:  13% (28/208)   [Kremote: Compressing objects:  14% (30/208)   [Kremote: Compressing objects:  15% (32/208)   [Kremote: Compressing objects:  16% (34/208)   [Kremote: Compressing objects:  17% (36/208)   [Kremote: Compressing objects:  18% (38/208)   [Kremote: Compressing objects:  19% (40/208)   [Kremote: Compressing objects:  20% (42/208)   [Kremote: Compressing objects:  21% (44/208)   [Kremote: Compressing objects:  22% (46/208)   [Kremote: Compressing objects:  23% (48/208)   [Kremote: Compressing objects:  24% (50/208)   [Kremote: Compressing objects:  25% (52/208)   [Kremote: Compressing objects:  26% (55/208)   [Kremote: Compressing objects:  27% (57/208)   [Kremote: Compressing objects:  28% (59/208)   [Kremote: Compressing objects:  29% (61/208)   [Kremote: Compressing objects:  30% (63/208)   [Kremote: Compressing objects:  31% (65/208)   [Kremote: Compressing objects:  32% (67/208)   [Kremote: Compressing objects:  33% (69/208)   [Kremote: Compressing objects:  34% (71/208)   [Kremote: Compressing objects:  35% (73/208)   [Kremote: Compressing objects:  36% (75/208)   [Kremote: Compressing objects:  37% (77/208)   [Kremote: Compressing objects:  38% (80/208)   [Kremote: Compressing objects:  39% (82/208)   [Kremote: Compressing objects:  40% (84/208)   [Kremote: Compressing objects:  41% (86/208)   [Kremote: Compressing objects:  42% (88/208)   [Kremote: Compressing objects:  43% (90/208)   [Kremote: Compressing objects:  44% (92/208)   [Kremote: Compressing objects:  45% (94/208)   [Kremote: Compressing objects:  46% (96/208)   [Kremote: Compressing objects:  47% (98/208)   [Kremote: Compressing objects:  48% (100/208)   [Kremote: Compressing objects:  49% (102/208)   [Kremote: Compressing objects:  50% (104/208)   [Kremote: Compressing objects:  51% (107/208)   [Kremote: Compressing objects:  52% (109/208)   [Kremote: Compressing objects:  53% (111/208)   [Kremote: Compressing objects:  54% (113/208)   [Kremote: Compressing objects:  55% (115/208)   [Kremote: Compressing objects:  56% (117/208)   [Kremote: Compressing objects:  57% (119/208)   [Kremote: Compressing objects:  58% (121/208)   [Kremote: Compressing objects:  59% (123/208)   [Kremote: Compressing objects:  60% (125/208)   [Kremote: Compressing objects:  61% (127/208)   [Kremote: Compressing objects:  62% (129/208)   [Kremote: Compressing objects:  63% (132/208)   [Kremote: Compressing objects:  64% (134/208)   [Kremote: Compressing objects:  65% (136/208)   [Kremote: Compressing objects:  66% (138/208)   [Kremote: Compressing objects:  67% (140/208)   [Kremote: Compressing objects:  68% (142/208)   [Kremote: Compressing objects:  69% (144/208)   [Kremote: Compressing objects:  70% (146/208)   [Kremote: Compressing objects:  71% (148/208)   [Kremote: Compressing objects:  72% (150/208)   [Kremote: Compressing objects:  73% (152/208)   [Kremote: Compressing objects:  74% (154/208)   [Kremote: Compressing objects:  75% (156/208)   [Kremote: Compressing objects:  76% (159/208)   [Kremote: Compressing objects:  77% (161/208)   [Kremote: Compressing objects:  78% (163/208)   [Kremote: Compressing objects:  79% (165/208)   [Kremote: Compressing objects:  80% (167/208)   [Kremote: Compressing objects:  81% (169/208)   [Kremote: Compressing objects:  82% (171/208)   [Kremote: Compressing objects:  83% (173/208)   [Kremote: Compressing objects:  84% (175/208)   [Kremote: Compressing objects:  85% (177/208)   [Kremote: Compressing objects:  86% (179/208)   [Kremote: Compressing objects:  87% (181/208)   [Kremote: Compressing objects:  88% (184/208)   [Kremote: Compressing objects:  89% (186/208)   [Kremote: Compressing objects:  90% (188/208)   [Kremote: Compressing objects:  91% (190/208)   [Kremote: Compressing objects:  92% (192/208)   [Kremote: Compressing objects:  93% (194/208)   [Kremote: Compressing objects:  94% (196/208)   [Kremote: Compressing objects:  95% (198/208)   [Kremote: Compressing objects:  96% (200/208)   [Kremote: Compressing objects:  97% (202/208)   [Kremote: Compressing objects:  98% (204/208)   [Kremote: Compressing objects:  99% (206/208)   [Kremote: Compressing objects: 100% (208/208)   [Kremote: Compressing objects: 100% (208/208), done.[K
+Receiving objects:   0% (1/217)   Receiving objects:   1% (3/217)   Receiving objects:   2% (5/217)   Receiving objects:   3% (7/217)   Receiving objects:   4% (9/217)   Receiving objects:   5% (11/217)   Receiving objects:   6% (14/217)   Receiving objects:   7% (16/217)   Receiving objects:   8% (18/217)   Receiving objects:   9% (20/217)   Receiving objects:  10% (22/217)   Receiving objects:  11% (24/217)   Receiving objects:  12% (27/217)   Receiving objects:  13% (29/217)   Receiving objects:  14% (31/217)   Receiving objects:  15% (33/217)   Receiving objects:  16% (35/217)   Receiving objects:  17% (37/217)   Receiving objects:  18% (40/217)   Receiving objects:  19% (42/217)   Receiving objects:  20% (44/217)   Receiving objects:  21% (46/217)   Receiving objects:  22% (48/217)   Receiving objects:  23% (50/217)   Receiving objects:  24% (53/217)   Receiving objects:  25% (55/217)   Receiving objects:  26% (57/217)   Receiving objects:  27% (59/217)   Receiving objects:  28% (61/217)   Receiving objects:  29% (63/217)   Receiving objects:  30% (66/217)   Receiving objects:  31% (68/217)   Receiving objects:  32% (70/217)   Receiving objects:  33% (72/217)   Receiving objects:  34% (74/217)   Receiving objects:  35% (76/217)   Receiving objects:  36% (79/217)   Receiving objects:  37% (81/217)   Receiving objects:  38% (83/217)   Receiving objects:  39% (85/217)   Receiving objects:  40% (87/217)   Receiving objects:  41% (89/217)   Receiving objects:  42% (92/217)   Receiving objects:  43% (94/217)   Receiving objects:  44% (96/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  45% (98/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  46% (100/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  47% (102/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  48% (105/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  49% (107/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  50% (109/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  51% (111/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  52% (113/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  53% (116/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  54% (118/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  55% (120/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  56% (122/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  57% (124/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  58% (126/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  59% (129/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  60% (131/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  61% (133/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  62% (135/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  63% (137/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  64% (139/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  65% (142/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  66% (144/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  67% (146/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  68% (148/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  69% (150/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  70% (152/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  71% (155/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  72% (157/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  73% (159/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  74% (161/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  75% (163/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  76% (165/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  77% (168/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  78% (170/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  79% (172/217), 2.47 MiB | 4.92 MiB/s   remote: Total 217 (delta 92), reused 0 (delta 0)[K
+Receiving objects:  80% (174/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  81% (176/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  82% (178/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  83% (181/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  84% (183/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  85% (185/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  86% (187/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  87% (189/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  88% (191/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  89% (194/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  90% (196/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  91% (198/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  92% (200/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  93% (202/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  94% (204/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  95% (207/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  96% (209/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  97% (211/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  98% (213/217), 2.47 MiB | 4.92 MiB/s   Receiving objects:  99% (215/217), 2.47 MiB | 4.92 MiB/s   Receiving objects: 100% (217/217), 2.47 MiB | 4.92 MiB/s   Receiving objects: 100% (217/217), 3.07 MiB | 5.51 MiB/s, done.
+Resolving deltas:   0% (0/92)   Resolving deltas:   2% (2/92)   Resolving deltas:   3% (3/92)   Resolving deltas:   4% (4/92)   Resolving deltas:   6% (6/92)   Resolving deltas:   8% (8/92)   Resolving deltas:  11% (11/92)   Resolving deltas:  23% (22/92)   Resolving deltas:  28% (26/92)   Resolving deltas:  39% (36/92)   Resolving deltas:  40% (37/92)   Resolving deltas:  41% (38/92)   Resolving deltas:  45% (42/92)   Resolving deltas:  47% (44/92)   Resolving deltas:  52% (48/92)   Resolving deltas:  53% (49/92)   Resolving deltas:  54% (50/92)   Resolving deltas:  55% (51/92)   Resolving deltas:  57% (53/92)   Resolving deltas:  58% (54/92)   Resolving deltas:  61% (57/92)   Resolving deltas:  64% (59/92)   Resolving deltas:  65% (60/92)   Resolving deltas:  72% (67/92)   Resolving deltas:  76% (70/92)   Resolving deltas:  82% (76/92)   Resolving deltas:  83% (77/92)   Resolving deltas:  84% (78/92)   Resolving deltas:  85% (79/92)   Resolving deltas:  86% (80/92)   Resolving deltas:  89% (82/92)   Resolving deltas:  98% (91/92)   Resolving deltas: 100% (92/92)   Resolving deltas: 100% (92/92), done.
+bhogan9@g7-02:~/git-repos$ ls
+cs220  cs240  i220a
+bhogan9@g7-02:~/git-repos$ cd [K[Kd cs240
+bhogan9@g7-02:~/git-repos/cs240$ git pull
+Warning: Permanently added the ECDSA host key for IP address '128.226.114.204' to the list of known hosts.
+/home/bhogan9/.bashrc: line 1: /home/umrigar/cs240/bin/student.rc: Permission denied
+Already up to date.
+bhogan9@g7-02:~/git-repos/cs240$ git log -5
+[?1h=[33mcommit 9e96ef3a13ea620d96e7b2a0bc1462d227d670d2[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Thu Jan 23 14:14:16 2020 -0500[m
+[m
+    trivial changes[m
+[m
+[33mcommit 8d6dd352014a55daef6e897d54d5bc33650ca50f[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Thu Jan 23 13:40:58 2020 -0500[m
+[m
+    added abet requirements to syllabus[m
+[m
+[33mcommit 24681db1cd13af495d8c1511f77123e5d91ed1dd[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Thu Jan 23 08:17:24 2020 -0500[m
+[m
+    added grading guidelines[m
+[m
+[33mcommit b28da302c11169a1a76ebab0b25099bb8241c34b[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Jan 22 22:01:19 2020 -0500[m
+[m
+    update syllabus and lab0 with TA info[m
+[m
+[33mcommit 8d242d7ee425f9c85f96bb6923179e7390091716[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Jan 22 12:34:04 2020 -0500[m
+[m
+    tweaks[m
+[K[?1l>bhogan9@g7-02:~/git-repos/cs240$ cd ..
+bhogan9@g7-02:~/git-repos$ ls
+cs220  cs240  i220a
+bhogan9@g7-02:~/git-repos$ rm -r cs220/
+rm: remove write-protected regular file 'cs220/.git/objects/pack/pack-63fa39bea7cc25d426432c06e5ccac71388b48b1.pack'? y
+rm: remove write-protected regular file 'cs220/.git/objects/pack/pack-63fa39bea7cc25d426432c06e5ccac71388b48b1.idx'? y
+rm: remove write-protected regular file 'cs220/.git/objects/pack/pack-b9f1451634bfd40e2ca5561c65d8e5aafeaa8f95.pack'? y
+rm: remove write-protected regular file 'cs220/.git/objects/pack/pack-b9f1451634bfd40e2ca5561c65d8e5aafeaa8f95.idx'? y
+rm: remove write-protected regular file 'cs220/.git/objects/pack/pack-754e0ba1acaa075d53c067df78ed5634272d3284.pack'? y
+rm: remove write-protected regular file 'cs220/.git/objects/pack/pack-754e0ba1acaa075d53c067df78ed5634272d3284.idx'? y
+rm: remove write-protected regular file 'cs220/.git/objects/pack/pack-594ece0ff73fbf4b8f41e41e39f19297d9469585.pack'? y
+rm: remove write-protected regular file 'cs220/.git/objects/pack/pack-594ece0ff73fbf4b8f41e41e39f19297d9469585.idx'? y
+rm: remove write-protected regular file 'cs220/.git/objects/pack/pack-d0cd4db1d8acff3f3d5ffb5632f84b3e71109ece.pack'? y
+rm: remove write-protected regular file 'cs220/.git/objects/pack/pack-d0cd4db1d8acff3f3d5ffb5632f84b3e71109ece.idx'? y
+rm: remove write-protected regular file 'cs220/.git/objects/51/d0e1845d69edff2faa4d6e245f2db51f1fef47'? y
+rm: remove write-protected regular file 'cs220/.git/objects/43/4b4165caabb02303cfd5c0406b646c2ac4f8c5'? y
+rm: remove write-protected regular file 'cs220/.git/objects/b9/f254762549fc27a5f0f81921fc3adc1c716c1b'? y
+rm: remove write-protected regular file 'cs220/.git/objects/b9/213896355bf78c2adb994780101eb74980e93e'? y
+rm: remove write-protected regular file 'cs220/.git/objects/3d/669386b756ae3332ae89bfee4bc0a1266dea35'? y
+rm: remove write-protected regular file 'cs220/.git/objects/3d/90cc523c2242f988cd47045414447056ad35c3'? y
+rm: remove write-protected regular file 'cs220/.git/objects/dc/29510815d111ac131972acc4d0c7b56b42fa6e'? y
+rm: remove write-protected regular file 'cs220/.git/objects/7c/d852acf9542ae019f6b931528f38694f3e4f45'? y
+rm: remove write-protected regular file 'cs220/.git/objects/7c/eb61f408cef3fc7d9bd40843026494dc991f04'? y
+rm: remove write-protected regular file 'cs220/.git/objects/82/6f4b8921e4e2d534565232e3c2f3526f9b780f'? y
+rm: remove write-protected regular file 'cs220/.git/objects/4d/3dd75e6867bb6fda61b3fd2a1aae534504c4f4'? y
+rm: remove write-protected regular file 'cs220/.git/objects/4d/b2c157abad79557f762f8d012d7005d03d17bd'? y
+rm: remove write-protected regular file 'cs220/.git/objects/c7/8fca575eb9abac3fb4754f7ea1e6e061e8c087'? y
+rm: remove write-protected regular file 'cs220/.git/objects/c7/611c71941f30b5da15e79a53c0d1aa9bf7e5c3'? y
+rm: remove write-protected regular file 'cs220/.git/objects/70/52e4146f104d835f07651ed093414af556ee2a'? y
+rm: remove write-protected regular file 'cs220/.git/objects/ba/78cdd36fea28c654010711f6e710aac4e7fc07'? y
+rm: remove write-protected regular file 'cs220/.git/objects/3a/345c76c44af3dc747c3884fa6ac08a79ca3a80'? y
+rm: remove write-protected regular file 'cs220/.git/objects/94/e56c7c499f032ba0ae95efaaa1f142ab880123'? y
+rm: remove write-protected regular file 'cs220/.git/objects/0b/c76f25777ee78e57030fa8e1f55436e356299f'? y
+rm: remove write-protected regular file 'cs220/.git/objects/f4/c562827f07fe77e64ed91a5e23ede27781e44b'? y
+rm: remove write-protected regular file 'cs220/.git/objects/ce/50b30b08672974dec315eb4b03eb5cd744ff89'? y
+rm: remove write-protected regular file 'cs220/.git/objects/c2/b9018954b75608967e4a75dd8d6cb3fef45da4'? y
+rm: remove write-protected regular file 'cs220/.git/objects/57/cf67b337c11e0ff9358580526deaa98d724446'? y
+rm: remove write-protected regular file 'cs220/.git/objects/57/5e3daaf818f74a4baaa3e9904d00d1095b30a9'? y
+rm: remove write-protected regular file 'cs220/.git/objects/57/5c179e7aef4f171b1f6ad01c3209f09c96f073'? y
+rm: remove write-protected regular file 'cs220/.git/objects/79/adb7e659e5c99cf0d5cd39ba40d0ff6ea99873'? y
+rm: remove write-protected regular file 'cs220/.git/objects/f9/f1802d2ad50a8a0255ab0a2af764423a3b1917'? y
+rm: remove write-protected regular file 'cs220/.git/objects/fb/8f72a86b44e1f61a4a6f8b3dba25d5d7e01a57'? y
+rm: remove write-protected regular file 'cs220/.git/objects/22/235bbf8fdcf4e7df1b58d3e2f342d6abafa0af'? y
+rm: remove write-protected regular file 'cs220/.git/objects/22/c47d63130bf9c65574e74c3be9381305e46a7b'? y
+rm: remove write-protected regular file 'cs220/.git/objects/a2/9766de1dde151b8b2238beda7c14c459dbc0e2'? y
+rm: remove write-protected regular file 'cs220/.git/objects/7e/80cab210608689ec742de83f843c45876b4c24'? y
+rm: remove write-protected regular file 'cs220/.git/objects/7e/c439ef2897cb1de1ce1bed4c5540f9e0386b3e'? y
+rm: remove write-protected regular file 'cs220/.git/objects/ee/19673eb317a5423f20ec72fdc8f727b9c2ef8c'? y
+rm: remove write-protected regular file 'cs220/.git/objects/b2/0a72ccd8fd904193a0b698324e530c1a6d233a'? y
+rm: remove write-protected regular file 'cs220/.git/objects/30/84f35437dd6baa4c01ec70cd33567981e35f98'? y
+rm: remove write-protected regular file 'cs220/.git/objects/30/512a2bd6831ee503576938ae82f927c3595a57'? y
+rm: remove write-protected regular file 'cs220/.git/objects/1d/c2975f2446c4f840324bac2157108fcc0e0509'? y
+rm: remove write-protected regular file 'cs220/.git/objects/1d/808ca2ee43b50f29050fa954e52125984e45d2'? y
+rm: remove write-protected regular file 'cs220/.git/objects/f3/e294474c1f00490abd504143fbd922df158204'? y
+rm: remove write-protected regular file 'cs220/.git/objects/0a/a88075fb8b1a01df3d39dcc70ba98b891e98c0'? y
+rm: remove write-protected regular file 'cs220/.git/objects/03/990e1497316e0d2964a1a50ac09da5a1564905'? y
+rm: remove write-protected regular file 'cs220/.git/objects/ff/77eaef9778a5226454e39e8238a3da69a4f5bc'? 
+rm: cannot remove 'cs220/.git/objects/ff': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/9e/6ffdb1e935d4a2f792801d2054fe2dfde4965b'? y
+rm: remove write-protected regular file 'cs220/.git/objects/3b/5e230b4b2b96f8445200d7ab37242eaa814da4'? 
+rm: cannot remove 'cs220/.git/objects/3b': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/af/c5f7f6a96347cc9c6152b6a1498039b02e8bf1'? 
+rm: cannot remove 'cs220/.git/objects/af': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/32/39f9590c0b31905613a30e4fcb0d6da0a73199'? 
+rm: cannot remove 'cs220/.git/objects/32': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/8c/578f7e8482f78e4857e9dafdb13941ed79ba00'? 
+rm: cannot remove 'cs220/.git/objects/8c': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/0c/db2d424d1922ba0863ca7c44c5bbecef135e7a'? 
+rm: cannot remove 'cs220/.git/objects/0c': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/6f/8ad3aed1a04223d634a99a081831030a1eb9c4'? 
+rm: cannot remove 'cs220/.git/objects/6f': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/a8/e441170a7643fe6c08febd59cd4cf02dce322b'? 
+rm: cannot remove 'cs220/.git/objects/a8': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/2e/9c0056585718403358fb8c93f2e667144aa316'? 
+rm: cannot remove 'cs220/.git/objects/2e': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/9f/baec485a3bda98c97338669f684d6cdf4259f8'? 
+rm: remove write-protected regular file 'cs220/.git/objects/9f/b7a576c5166d53775dddd010bb93d5991f0226'? 
+rm: cannot remove 'cs220/.git/objects/9f': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/56/45dff6e942f826eaabb63e7c7fc65ddffd37f0'? 
+rm: cannot remove 'cs220/.git/objects/56': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/84/43fba21f39f5a46fb1577380220b6d398de156'? 
+rm: cannot remove 'cs220/.git/objects/84': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/b7/abbd103aff78a71c38ad8da6de3158567323e2'? 
+rm: cannot remove 'cs220/.git/objects/b7': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/05/397a86fafcb24761c43c5244a082a77b449b3f'? 
+rm: cannot remove 'cs220/.git/objects/05': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/ed/e72328972d4e6c50845ac0bd392a95cb7d41d2'? 
+rm: cannot remove 'cs220/.git/objects/ed': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/83/bc4b38f1a1dec00ba424519564b77b06dcf564'? 
+rm: cannot remove 'cs220/.git/objects/83': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/40/5ad3474553b054ba061010ee95d572c35bad68'? 
+rm: cannot remove 'cs220/.git/objects/40': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/e7/7fb0199f5ed9805fc53de40a52e97d8d7575fa'? 
+rm: cannot remove 'cs220/.git/objects/e7': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/a6/975d3f48183acc4a7ac7c05c2f976dc48ef0c6'? 
+rm: cannot remove 'cs220/.git/objects/a6': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/da/f1248762ba64be5eda4bd8b5638b565880355c'? 
+rm: cannot remove 'cs220/.git/objects/da': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/50/8bb74926156a384bc29565c7c90de6b6f90e02'? 
+rm: cannot remove 'cs220/.git/objects/50': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/3c/c66b8053314991be64498ec3eca06890356e2c'? 
+rm: cannot remove 'cs220/.git/objects/3c': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/9b/5560c3b34a5b02ef0249a7a49df5b207e06156'? 
+rm: cannot remove 'cs220/.git/objects/9b': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/75/11d9c1e2ff0b84107a60714134b0f03efe9009'? 
+rm: cannot remove 'cs220/.git/objects/75': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/8d/94d4b56bcd3cb48d9deb61226cf370938244ec'? 
+rm: cannot remove 'cs220/.git/objects/8d': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/53/3bf0e03b2982fdc74d150a40495db52c709661'? 
+rm: cannot remove 'cs220/.git/objects/53': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/72/45a4e017ee4fd85ee049393b5b040a49a3ff6c'? 
+rm: cannot remove 'cs220/.git/objects/72': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/18/888229572970557548fcb6e51e58c976746c0a'? 
+rm: cannot remove 'cs220/.git/objects/18': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/19/f69cd9028e4b59284836516c508aa2197caa16'? 
+rm: cannot remove 'cs220/.git/objects/19': Directory not empty
+rm: remove write-protected regular file 'cs220/.git/objects/f0/999c983a88bc8638e77269f1d03558ef621a0a'? 
+rm: cannot remove 'cs220/.git/objects/f0': Directory not empty
+
+
+
+
+
+
+
+
+bhogan9@g7-02:~/git-repos$ 
+bhogan9@g7-02:~/git-repos$ 
+bhogan9@g7-02:~/git-repos$ 
+bhogan9@g7-02:~/git-repos$ 
+bhogan9@g7-02:~/git-repos$ 
+bhogan9@g7-02:~/git-repos$ 
+bhogan9@g7-02:~/git-repos$ 
+bhogan9@g7-02:~/git-repos$ 
+bhogan9@g7-02:~/git-repos$ ls
+cs220  cs240  i220a
+bhogan9@g7-02:~/git-repos$ git clone git@github.com:bhogan9/i240b.git
+Cloning into 'i240b'...
+The authenticity of host 'github.com (192.30.253.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+bhogan9@g7-02:~/git-repos$ cd ..
+bhogan9@g7-02:~$ cat
+
+
+^[[A^[[A^[[A            ~/.ssh/id_====     _rsa.pub
+~/.ssh/id_rsa.pub
+^C
+bhogan9@g7-02:~$ ^C
+bhogan9@g7-02:~$ ^C
+bhogan9@g7-02:~$ ^C
+bhogan9@g7-02:~$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCswfT3Cyi+/B2fWxmjP0tasDSRLzFhEg8YvuaXUNS2Yo82R6XryiasOpsW8gxnmO2lMIDTPXT+AVgzzjGUiLzGD3DP5WZ7q9e1Xr9lfMcDz3Ih4eomo/BGZi8RDA0bRnEIayVo0Yd1wCGsvrOtR8w118/6UEHT1Do8M01cKDGZB6dUKAwRAElBPomAn91OnazowyHNdxxjkCFX3SZxB32r6tyYDzAC+vxZ9mSS5dNzmwRirYQoHZAz+OFGSzn97j7NINC9ORs6owz3mf8Q3h+WG7onzyn5HxBKrmG2rijIl6b1unComGhHQoPWH4EsJOmaAUuAADQ0j/rVp9PwM8J bhogan9@g7-02
+bhogan9@g7-02:~$ [Kbhogan9@g7-02:~$ [Kbhogan9@g7-02:~$ [Kbhogan9@g7-02:~$ [Kbhogan9@g7-02:~$ ^C
+bhogan9@g7-02:~$ cd[K[Kmkdir -p ~/projects
+bhogan9@g7-02:~$ cd ~/projects/
+bhogan9@g7-02:~/projects$ git clone git@github.com:bhogan9/i240b.git
+Cloning into 'i240b'...
+Warning: Permanently added the RSA host key for IP address '140.82.114.3' to the list of known hosts.
+remote: Enumerating objects: 4, done.[K
+remote: Counting objects:  25% (1/4)[Kremote: Counting objects:  50% (2/4)[Kremote: Counting objects:  75% (3/4)[Kremote: Counting objects: 100% (4/4)[Kremote: Counting objects: 100% (4/4), done.[K
+remote: Compressing objects:  33% (1/3)[Kremote: Compressing objects:  66% (2/3)[Kremote: Compressing objects: 100% (3/3)[Kremote: Compressing objects: 100% (3/3), done.[K
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0[K
+Receiving objects:  25% (1/4)   Receiving objects:  50% (2/4)   Receiving objects:  75% (3/4)   Receiving objects: 100% (4/4)   Receiving objects: 100% (4/4), done.
+bhogan9@g7-02:~/projects$ cd ~
+bhogan9@g7-02:~$ ln -s ~/projects/i240? .
+bhogan9@g7-02:~$ cd[K[Kls
+Arduino  cs220	Desktop    Downloads  i240b  Pictures  Public	  testing  Videos
+cs120	 cs240	Documents  git-repos  Music  projects  Templates  tmp
+bhogan9@g7-02:~$ cd projects/
+bhogan9@g7-02:~/projects$ ls
+cs240  i240b
+bhogan9@g7-02:~/projects$ cd i240b/
+bhogan9@g7-02:~/projects/i240b$ ls
+README.md
+bhogan9@g7-02:~/projects/i240b$ cd ..
+bhogan9@g7-02:~/projects$ cd ..
+bhogan9@g7-02:~$ cd git-repos/
+bhogan9@g7-02:~/git-repos$ ls
+cs220  cs240  i220a
+bhogan9@g7-02:~/git-repos$ cd[K[Klscd git-repos/..[K[3Plscd i240b/ls[Kcd projects/ls[Kn -s ~/projects/i240? .cd ~[Kgit clone git@github.com:bhogan9/i240b.git
+Cloning into 'i240b'...
+Warning: Permanently added the RSA host key for IP address '140.82.114.4' to the list of known hosts.
+remote: Enumerating objects: 4, done.[K
+remote: Counting objects:  25% (1/4)[Kremote: Counting objects:  50% (2/4)[Kremote: Counting objects:  75% (3/4)[Kremote: Counting objects: 100% (4/4)[Kremote: Counting objects: 100% (4/4), done.[K
+remote: Compressing objects:  33% (1/3)[Kremote: Compressing objects:  66% (2/3)[Kremote: Compressing objects: 100% (3/3)[Kremote: Compressing objects: 100% (3/3), done.[K
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0[K
+Receiving objects:  25% (1/4)   Receiving objects:  50% (2/4)   Receiving objects:  75% (3/4)   Receiving objects: 100% (4/4)   Receiving objects: 100% (4/4), done.
+bhogan9@g7-02:~/git-repos$ git clone git@github.com:bhogan9/i240b.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kcd git-repos/..[K
+bhogan9@g7-02:~$ cd ..git clone git@github.com:bhogan9/i240b.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kcd git-repos/..[K[3Plscd i240b/ls[Kcd projects/ls[Kn -s ~/projects/i240? .
+ln: failed to create symbolic link './i240b': File exists
+bhogan9@g7-02:~$ ln -s ~/projects/i240? .[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd projects/
+bhogan9@g7-02:~/projects$ ls
+cs240  i240b
+bhogan9@g7-02:~/projects$ cd i240b/
+bhogan9@g7-02:~/projects/i240b$ git pull
+Warning: Permanently added the RSA host key for IP address '140.82.113.3' to the list of known hosts.
+Already up to date.
+bhogan9@g7-02:~/projects/i240b$ ls
+README.md
+bhogan9@g7-02:~/projects/i240b$ emacs .gitignore 
+bhogan9@g7-02:~/projects/i240b$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .gitignore[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bhogan9@g7-02:~/projects/i240b$ git add[K[K[K[K[K[Kit commit -a -m 'S[K[K'Set[K[Ketting Up Account'
+[master 1fd5f29] Setting Up Account
+ Committer: Benjamin Hogan <bhogan9@cs.binghamton.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+bhogan9@g7-02:~/projects/i240b$ git push
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)   Counting objects:  40% (2/5)   Counting objects:  60% (3/5)   Counting objects:  80% (4/5)   Counting objects: 100% (5/5)   Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 324 bytes | 324.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To github.com:bhogan9/i240b.git
+   204a48a..1fd5f29  master -> master
+bhogan9@g7-02:~/projects/i240b$ ls -dk[Kl ~/cs240 ~/i240b
+lrwxrwxrwx 1 bhogan9 bhogan9 14 Jan 23 15:07 /home/bhogan9/cs240 -> projects/cs240
+lrwxrwxrwx 1 bhogan9 bhogan9 28 Jan 23 15:23 /home/bhogan9/i240b -> /home/bhogan9/projects/i240b
+bhogan9@g7-02:~/projects/i240b$ ls -l `?.[K[K[K~/.ssh ~/cs240 ~/i240b
+lrwxrwxrwx 1 bhogan9 bhogan9 14 Jan 23 15:07 /home/bhogan9/cs240 -> projects/cs240
+lrwxrwxrwx 1 bhogan9 bhogan9 28 Jan 23 15:23 /home/bhogan9/i240b -> /home/bhogan9/projects/i240b
+
+/home/bhogan9/.ssh:
+total 20
+-rw------- 1 bhogan9 bhogan9  395 Jan 23 14:48 authorized_keys
+-rw------- 1 bhogan9 bhogan9 1823 Jan 23 14:47 id_rsa
+-rw-r----- 1 bhogan9 bhogan9  395 Jan 23 14:47 id_rsa.pub
+-rw-r--r-- 1 bhogan9 bhogan9 4208 Jan 23 15:25 known_hosts
+bhogan9@g7-02:~/projects/i240b$ cd ~/i240b
+bhogan9@g7-02:~/i240b$ ls
+README.md
+bhogan9@g7-02:~/i240b$ git checkout -b lab0
+Switched to a new branch 'lab0'
+bhogan9@g7-02:~/i240b$ mkdir -p submit
+bhogan9@g7-02:~/i240b$ exit
+
+Script done on 2020-01-23 15:31:06-05:00 [COMMAND_EXIT_CODE="0"]
