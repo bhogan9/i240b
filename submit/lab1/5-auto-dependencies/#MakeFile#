@@ -1,0 +1,17 @@
+CXX = tar
+CXXFLAGS = -cf
+
+FILES = \
+	constant.cc \
+	fact.cc \
+	lg.cc \
+	cubic.cc \
+	nlg.cc \
+	fns-compare.cc \
+	linear.cc \
+	exponential.cc \
+	quadratic.cc \
+	fns-compare.hh \
+	Makefile
+
+TARGET = fns-compare.tar
