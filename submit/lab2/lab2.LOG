@@ -1,0 +1,623 @@
+Script started on 2020-02-06 14:50:40-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="94" LINES="49"]
+bash: /home/umrigar/cs240/bin/student.rc: Permission denied
+bhogan9@g7-01:~/i240b/submit/lab2$ ls
+lab2.LOG
+bhogan9@g7-01:~/i240b/submit/lab2$ cd ..[K[K[K[K[Kcp -r ~/cs240/labs/lab2/exercises/* .
+bhogan9@g7-01:~/i240b/submit/lab2$ ls
+1-hello  2-hello  3-overload  lab2.LOG	Makefile
+bhogan9@g7-01:~/i240b/submit/lab2$ cd exe[K[K[K[K[K[Kcd 1-hello/
+bhogan9@g7-01:~/i240b/submit/lab2/1-hello$ ls
+hello.cc  Makefile  README
+bhogan9@g7-01:~/i240b/submit/lab2/1-hello$ emacs README
+bhogan9@g7-01:~/i240b/submit/lab2/1-hello$ make
+g++ -g -Wall -std=c++17    hello.cc   -o hello
+bhogan9@g7-01:~/i240b/submit/lab2/1-hello$ ./hello
+usage: ./hello NAME...
+bhogan9@g7-01:~/i240b/submit/lab2/1-hello$ ./hello bart lisa
+hello bart
+hello lisa
+hello bhogan9@g7-01:~/i240b/submit/lab2/1-hello$ ./hello bart lisa
+hello bart
+hello lisa
+hello bhogan9@g7-01:~/i240b/submit/lab2/1-hello$ ./hello bart lisa 
+hello bart
+hello lisa
+hello bhogan9@g7-01:~/i240b/submit/lab2/1-hello$ ./hello bart lisa [K
+hello bart
+hello lisa
+hello bhogan9@g7-01:~/i240b/submit/lab2/1-hello$ emacs hello.cc
+bhogan9@g7-01:~/i240b/submit/lab2/1-hello$ make
+g++ -g -Wall -std=c++17    hello.cc   -o hello
+bhogan9@g7-01:~/i240b/submit/lab2/1-hello$ ./hello[Ko b[K[K
+usage: ./hello NAME...
+bhogan9@g7-01:~/i240b/submit/lab2/1-hello$ ./hello bart lisa
+hello bart
+hello lisa
+bhogan9@g7-01:~/i240b/submit/lab2/1-hello$ gdb hello
+GNU gdb (Debian 8.2.1-2+b3) 8.2.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from hello...done.
+(gdb) start bart lisa
+Temporary breakpoint 1 at 0x11cd: file hello.cc, line 13.
+Starting program: /import/linux/home1/bhogan9/projects/i240b/submit/lab2/1-hello/hello bart lisa
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffe778) at hello.cc:13
+13	  if (argc == 1) {
+(gdb) l
+8	}
+9	
+10	int 
+11	main(int argc, const char *argv[])
+12	{
+13	  if (argc == 1) {
+14	    std::cerr << "usage: " << argv[0] << " NAME..." << std::endl;
+15	    std::exit(1);
+16	  }
+17	  else {
+(gdb) b sayHello
+Breakpoint 2 at 0x555555555181: file hello.cc, line 7.
+(gdb) p argc
+$1 = 3
+(gdb) p argv
+$2 = (const char **) 0x7fffffffe778
+(gdb) p argv[0]
+$3 = 0x7fffffffea66 "/import/linux/home1/bhogan9/projects/i240b/submit/lab2/1-hello/hello"
+(gdb) p argv[0][1P]1]
+$4 = 0x7fffffffeaab "bart"
+(gdb) p argv[1][1P]2]
+$5 = 0x7fffffffeab0 "lisa"
+(gdb) p argv[2][1P]3]
+$6 = 0x0
+(gdb) p argv[3][K[K[K@3
+$7 = {0x7fffffffe778, 0x355555090, 0x7fffffffe770}
+(gdb) n
+18	    for (int i = 1; i < argc; i++) {
+(gdb) n
+19	      sayHello(argv[i]);
+(gdb) p i
+$8 = 1
+(gdb) c
+Continuing.
+
+Breakpoint 2, sayHello (name=0x7fffffffeaab "bart") at hello.cc:7
+7	  std::cout << "hello " << name << std::endl;
+(gdb) l
+2	#include <cstdlib>
+3	
+4	static void
+5	sayHello(const char *name)
+6	{
+7	  std::cout << "hello " << name << std::endl;
+8	}
+9	
+10	int 
+11	main(int argc, const char *argv[])
+(gdb) backtrace
+#0  sayHello (name=0x7fffffffeaab "bart") at hello.cc:7
+#1  0x0000555555555257 in main (argc=3, argv=0x7fffffffe778) at hello.cc:19
+(gdb) print[K[K[K [K[K argc
+No symbol "argc" in current context.
+(gdb) up
+#1  0x0000555555555257 in main (argc=3, argv=0x7fffffffe778) at hello.cc:19
+19	      sayHello(argv[i]);
+(gdb) upp argc
+$9 = 3
+(gdb) down
+#0  sayHello (name=0x7fffffffeaab "bart") at hello.cc:7
+7	  std::cout << "hello " << name << std::endl;
+(gdb) c
+Continuing.
+hello bart
+
+Breakpoint 2, sayHello (name=0x7fffffffeab0 "lisa") at hello.cc:7
+7	  std::cout << "hello " << name << std::endl;
+(gdb) c
+Continuing.
+hello lisa
+[Inferior 1 (process 1137985) exited normally]
+(gdb) c
+The program is not being run.
+(gdb) q
+bhogan9@g7-01:~/i240b/submit/lab2/1-hello$ cd ..
+bhogan9@g7-01:~/i240b/submit/lab2$ cd 2-hello/
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ ls
+hello.cc  Makefile  README
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ make
+g++ -g -Wall -std=c++17    hello.cc   -o hello
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ ./hello lisa bart
+Hello Lisa
+Hello Bart
+Segmentation fault
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ ./hello lisa bart
+Hello Lisa
+Hello Bart
+Segmentation fault
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ gdb hello
+GNU gdb (Debian 8.2.1-2+b3) 8.2.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from hello...done.
+(gdb) start b[Klisa bart
+Temporary breakpoint 1 at 0x12e1: file hello.cc, line 36.
+Starting program: /import/linux/home1/bhogan9/projects/i240b/submit/lab2/2-hello/hello lisa bart
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffe778) at hello.cc:36
+36	  if (argc == 1) {
+(gdb) start lisa bart[C[C[C[C[C[C[Kn
+41	    for (int i = 1; i <= argc; i++) {
+(gdb) l
+36	  if (argc == 1) {
+37	    std::cerr << "usage: " << argv[0] << " NAME..." << std::endl;
+38	    std::exit(1);
+39	  }
+40	  else {
+41	    for (int i = 1; i <= argc; i++) {
+42	      const char *name = argv[i];
+43	      char friendlyName[strlen(name)];
+44	      upcaseWords(name, friendlyName);
+45	      sayHello(friendlyName);
+(gdb) l[Kq
+A debugging session is active.
+
+	Inferior 1 [process 1138771] will be killed.
+
+Quit anyway? (y or n) y
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ r[Kemacs hello.cc
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ gbd
+bash: gbd: command not found
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ gbd[K[Kdg[Kb hello
+GNU gdb (Debian 8.2.1-2+b3) 8.2.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from hello...done.
+(gdb) breakpoint [K[K[K[K[K[K[K[K[K[K[Kstart lisa bart
+Temporary breakpoint 1 at 0x12e1: file hello.cc, line 36.
+Starting program: /import/linux/home1/bhogan9/projects/i240b/submit/lab2/2-hello/hello lisa bart
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffe778) at hello.cc:36
+36	  if (argc == 1) {
+(gdb) b sayHello
+Breakpoint 2 at 0x55555555528c: file hello.cc, line 29.
+(gdb) n
+41	    for (int i = 1; i <= argc; i++) {
+(gdb) c
+Continuing.
+
+Breakpoint 2, sayHello (name=0x7fffffffe620 "Lisa") at hello.cc:29
+29	  std::cout << "Hello " << name << std::endl;
+(gdb) c
+Continuing.
+Hello Lisa
+
+Breakpoint 2, sayHello (name=0x7fffffffe620 "Bart") at hello.cc:29
+29	  std::cout << "Hello " << name << std::endl;
+(gdb) c
+Continuing.
+Hello Bart
+
+Program received signal SIGSEGV, Segmentation fault.
+__strlen_sse2 () at ../sysdeps/x86_64/multiarch/../strlen.S:120
+120	../sysdeps/x86_64/multiarch/../strlen.S: No such file or directory.
+(gdb) start[K[K[K[K[Kc
+Continuing.
+
+Program terminated with signal SIGSEGV, Segmentation fault.
+The program no longer exists.
+(gdb) start b[Klisa bart
+Temporary breakpoint 3 at 0x5555555552e1: file hello.cc, line 36.
+Starting program: /import/linux/home1/bhogan9/projects/i240b/submit/lab2/2-hello/hello lisa bart
+
+Temporary breakpoint 3, main (argc=3, argv=0x7fffffffe778) at hello.cc:36
+36	  if (argc == 1) {
+(gdb) n
+41	    for (int i = 1; i <= argc; i++) {
+(gdb) n
+46	    }
+(gdb) n
+42	      const char *name = argv[i];
+(gdb) argv[K[K[K[Kp argv[0]
+$1 = 0x7fffffffea66 "/import/linux/home1/bhogan9/projects/i240b/submit/lab2/2-hello/hello"
+(gdb) p argv[0][1P[0]c[0]
+cannot subscript something of type `int'
+(gdb) p argc[0][C[C[1P]1]
+cannot subscript something of type `int'
+(gdb) p argc[1][C[1P[1]v[1]
+$2 = 0x7fffffffeaab "lisa"
+(gdb) p argv[1][C[C[C[1P]2]
+$3 = 0x7fffffffeab0 "bart"
+(gdb) p argv[2][1P]3]
+$4 = 0x0
+(gdb) p argv[3][1P]4]
+$5 = 0x7fffffffeab5 "SHELL=/bin/bash"
+(gdb) p argv[4][1P]5]
+$6 = 0x7fffffffeac5 "SESSION_MANAGER=local/g7-01:@/tmp/.ICE-unix/1136409,unix/g7-01:/tmp/.ICE-unix/1136409"
+(gdb) n
+43	      char friendlyName[strlen(name)];
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 1139187] will be killed.
+
+Quit anyway? (y or n) n
+Not confirmed.
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 1139187] will be killed.
+
+Quit anyway? (y or n) y
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ emacs hello.cc
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ make
+g++ -g -Wall -std=c++17    hello.cc   -o hello
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ ./hello lisa bart
+Hello Lisa
+Hello Bart
+Segmentation fault
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ ./hello lisa bartmake[Kemacs hello.ccmake[K./hello lisa bart[Kgdb hello
+GNU gdb (Debian 8.2.1-2+b3) 8.2.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from hello...done.
+(gdb) start lisa bart
+Temporary breakpoint 1 at 0x12e1: file hello.cc, line 36.
+Starting program: /import/linux/home1/bhogan9/projects/i240b/submit/lab2/2-hello/hello lisa bart
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffe778) at hello.cc:36
+36	  if (argc == 1) {
+(gdb) n
+41	    for (int i = 1; i <= argc; i++) {
+(gdb) n
+46	    }
+(gdb) n
+42	      const char *name = argv[i];
+(gdb) p name
+$1 = 0x2 <error: Cannot access memory at address 0x2>
+(gdb) p name*name
+Cannot access memory at address 0x2
+(gdb) p *name[K[K[K[K[Karg[K[K[Ki
+$2 = 1
+(gdb) p i[Kargv[1]
+$3 = 0x7fffffffeaab "lisa"
+(gdb) nm[K
+43	      char friendlyName[strlen(name)+1];
+(gdb) n[Kn
+44	      upcaseWords(name, friendlyName);
+(gdb) n
+45	      sayHello(friendlyName);
+(gdb) b up
+upcaseWords(char const*, char*)  updwtmp.c
+update_cur_sifted_state          updwtmp_file
+update_get_addr                  updwtmpx
+updwtmp                          updwtmpx.c
+(gdb) b uper[K[KcaseWords(char const*, char*) \[K
+Breakpoint 2 at 0x5555555551b5: file hello.cc, line 13.
+(gdb) c
+Continuing.
+Hello Lisa
+
+Breakpoint 2, upcaseWords (in=0x7fffffffeab0 "bart", out=0x7fffffffe620 "Lisa")
+    at hello.cc:13
+13	  bool inWord = false;
+(gdb) ls[K[Kn
+14	  const int n = std::strlen(in);
+(gdb) p n
+$4 = 4
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 1140083] will be killed.
+
+Quit anyway? (y or n) y
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ emacs
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ emacs hello.c
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ ls
+hello  hello.cc  hello.cc~  Makefile  README
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ rm[K[Kemac [Ks hello.cc
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ make
+g++ -g -Wall -std=c++17    hello.cc   -o hello
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ ./hello lisa bart
+Hello Lisa
+Hello Bart
+Segmentation fault
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ emacs he[K[Khello.cc
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ make
+g++ -g -Wall -std=c++17    hello.cc   -o hello
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ makeemacs hello.cc./hello lisa bart
+Hello Lisa
+Hello Bart
+Segmentation fault
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ ./hello lisa bartmake[Kemacs hello.cc
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ gdb hello
+GNU gdb (Debian 8.2.1-2+b3) 8.2.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from hello...done.
+(gdb) start lisa bart
+Temporary breakpoint 1 at 0x12e4: file hello.cc, line 36.
+Starting program: /import/linux/home1/bhogan9/projects/i240b/submit/lab2/2-hello/hello lisa bart
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffe778) at hello.cc:36
+36	  if (argc == 1) {
+(gdb) n
+41	    for (int i = 1; i <= argc; i++) {
+(gdb) n
+46	    }
+(gdb) n
+42	      const char *name = argv[i];
+(gdb) n
+43	      char friendlyName[strlen(name)+1];
+(gdb) n
+44	      upcaseWords(name, friendlyName);
+(gdb) n
+45	      sayHello(friendlyName);
+(gdb) n
+Hello Lisa
+41	    for (int i = 1; i <= argc; i++) {
+(gdb) n
+46	    }
+(gdb) n
+42	      const char *name = argv[i];
+(gdb) n
+43	      char friendlyName[strlen(name)+1];
+(gdb) n
+44	      upcaseWords(name, friendlyName);
+(gdb) down
+Bottom (innermost) frame selected; you cannot go down.
+(gdb) gm[K[Kb h[Kcu[K[KupcaseWords(char const*, char*) \[K
+Breakpoint 2 at 0x5555555551b5: file hello.cc, line 13.
+(gdb) n
+
+Breakpoint 2, upcaseWords (in=0x7fffffffeab0 "bart", out=0x7fffffffe620 "Lisa")
+    at hello.cc:13
+13	  bool inWord = false;
+(gdb) n
+14	  const int n = std::strlen(in)+1;
+(gdb) n[Kp n
+$1 = 5
+(gdb) n
+15	  for (int i = 0; i < n; i++) {
+(gdb) n
+16	    if (!inWord && std::isalpha(in[i])) {
+(gdb) n
+17	      out[i] = std::toupper(in[i]);
+(gdb) p out@6
+$2 = {0x7fffffffe620 "Lisa", 0x7fffffffeab0 "bart", 
+  0x5ffffe640 <error: Cannot access memory at address 0x5ffffe640>, 
+  0x7fff00000000 <error: Cannot access memory at address 0x7fff00000000>, 
+  0x7fffffffe690 "pTUUUU", 
+  0x5555555553e6 <main(int, char const**)+282> "H\213E\260H\211\307\350\221\376\377\377H\211܃E\314\001\351I\377\377\377\270"}
+(gdb) p out@6[K1
+$3 = {0x7fffffffe620 "Lisa"}
+(gdb) p out@1[K2
+$4 = {0x7fffffffe620 "Lisa", 0x7fffffffeab0 "bart"}
+(gdb) p out@2[K3
+$5 = {0x7fffffffe620 "Lisa", 0x7fffffffeab0 "bart", 
+  0x5ffffe640 <error: Cannot access memory at address 0x5ffffe640>}
+(gdb) p out@3[K4
+$6 = {0x7fffffffe620 "Lisa", 0x7fffffffeab0 "bart", 
+  0x5ffffe640 <error: Cannot access memory at address 0x5ffffe640>, 
+  0x7fff00000000 <error: Cannot access memory at address 0x7fff00000000>}
+(gdb) p ty[K[K[Ktype out
+type = char *
+(gdb) ptype out[K[K[K[K[K[K[K[K out@len
+No symbol "len" in current context.
+(gdb) n
+22	    inWord = std::isalpha(in[i]);
+(gdb) p inWord
+$7 = false
+(gdb) p inWord[C[C[C[C[C[Cn[K
+15	  for (int i = 0; i < n; i++) {
+(gdb) n
+16	    if (!inWord && std::isalpha(in[i])) {
+(gdb) n
+20	      out[i] = in[i];
+(gdb) n
+22	    inWord = std::isalpha(in[i]);
+(gdb) n
+15	  for (int i = 0; i < n; i++) {
+(gdb) n
+16	    if (!inWord && std::isalpha(in[i])) {
+(gdb) n
+20	      out[i] = in[i];
+(gdb) n
+22	    inWord = std::isalpha(in[i]);
+(gdb) n
+15	  for (int i = 0; i < n; i++) {
+(gdb) n
+16	    if (!inWord && std::isalpha(in[i])) {
+(gdb) p i
+$8 = 3
+(gdb) p n
+$9 = 5
+(gdb) p n[K[K[Kn
+20	      out[i] = in[i];
+(gdb) n
+22	    inWord = std::isalpha(in[i]);
+(gdb) n
+15	  for (int i = 0; i < n; i++) {
+(gdb) n
+16	    if (!inWord && std::isalpha(in[i])) {
+(gdb) n
+20	      out[i] = in[i];
+(gdb) n
+22	    inWord = std::isalpha(in[i]);
+(gdb) n
+15	  for (int i = 0; i < n; i++) {
+(gdb) n
+24	}
+(gdb) l
+19	    else {
+20	      out[i] = in[i];
+21	    }
+22	    inWord = std::isalpha(in[i]);
+23	  }
+24	}
+25	
+26	static void
+27	sayHello(const char *name)
+28	{
+(gdb) l[Kn
+main (argc=3, argv=0x7fffffffe778) at hello.cc:45
+45	      sayHello(friendlyName);
+(gdb) n
+Hello Bart
+41	    for (int i = 1; i <= argc; i++) {
+(gdb) n
+46	    }
+(gdb) n
+42	      const char *name = argv[i];
+(gdb) n
+43	      char friendlyName[strlen(name)+1];
+(gdb) n
+
+Program received signal SIGSEGV, Segmentation fault.
+__strlen_sse2 () at ../sysdeps/x86_64/multiarch/../strlen.S:120
+120	../sysdeps/x86_64/multiarch/../strlen.S: No such file or directory.
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 1140698] will be killed.
+
+Quit anyway? (y or n) y
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ m[Kemacs hello.cc\[K
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ make
+g++ -g -Wall -std=c++17    hello.cc   -o hello
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ ./hello lisa bart
+Hello Lisa
+Hello Bart
+bhogan9@g7-01:~/i240b/submit/lab2/2-hello$ cd ..
+bhogan9@g7-01:~/i240b/submit/lab2$ cd 3-overload/[K[K[K[K[K[K[K[K[K[K[K[K[Kd 3-overload/
+bhogan9@g7-01:~/i240b/submit/lab2/3-overload$ ls
+Makefile  overload.cc
+bhogan9@g7-01:~/i240b/submit/lab2/3-overload$ emacs overload.cc 
+bhogan9@g7-01:~/i240b/submit/lab2/3-overload$ emacs[K[K[K[K[Kmake
+g++ -g -Wall -std=c++17    overload.cc   -o overload
+bhogan9@g7-01:~/i240b/submit/lab2/3-overload$ ./overload 
+f(a) = 3; f(&a) = 4; f(a, b) = -1
+bhogan9@g7-01:~/i240b/submit/lab2/3-overload$ gdb overload
+GNU gdb (Debian 8.2.1-2+b3) 8.2.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from overload...done.
+(gdb) bre[K[K f()
+Function "f()" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) b f()[C[K[K[Kf(int
+f(int)       f(int*)      f(int, int)  
+Make breakpoint pending on future shared library load? (y or [n]) b f(int*)
+Please answer y or [n].
+Make breakpoint pending on future shared library load? (y or [n]) y
+Breakpoint 1 (f()) pending.
+(gdb) r
+Starting program: /import/linux/home1/bhogan9/projects/i240b/submit/lab2/3-overload/overload 
+f(a) = 3; f(&a) = 4; f(a, b) = -1
+[Inferior 1 (process 1142269) exited normally]
+(gdb) p a
+$1 = {i = {0, 1045149306}, d = 1.2904777690891933e-08}
+(gdb) start
+Temporary breakpoint 2 at 0x5555555551b1: file overload.cc, line 9.
+Starting program: /import/linux/home1/bhogan9/projects/i240b/submit/lab2/3-overload/overload 
+
+Temporary breakpoint 2, main () at overload.cc:9
+9	  int a = 2;
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) n
+Program not restarted.
+(gdb) n
+10	  int b = 3;
+(gdb) n
+12	    << "f(a) = " << f(a)
+(gdb) n
+13	    << "; f(&a) = " << f(&a)
+(gdb) n
+14	    << "; f(a, b) = " << f(a, b)
+(gdb) n
+15	    << std::endl;
+(gdb) n
+f(a) = 3; f(&a) = 4; f(a, b) = -1
+16	}
+(gdb) n
+__libc_start_main (main=0x5555555551a8 <main()>, argc=1, argv=0x7fffffffe788, 
+    init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, 
+    stack_end=0x7fffffffe778) at ../csu/libc-start.c:342
+342	../csu/libc-start.c: No such file or directory.
+(gdb) n
+[Inferior 1 (process 1142344) exited normally]
+(gdb) n[Kp a
+$2 = {i = {0, 1045149306}, d = 1.2904777690891933e-08}
+bhogan9@g7-01:~/i240b/submit/lab2/3-overload$ exit
+
+Script done on 2020-02-06 15:31:17-05:00 [COMMAND_EXIT_CODE="0"]
