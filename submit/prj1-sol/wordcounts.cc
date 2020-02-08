@@ -9,6 +9,18 @@ typedef int Count;
 typedef std::pair<std::string, Count> WordCount;
 
 bool wordCountCompare(WordCount a, WordCount b){
+  if(a.second == b.second){
+    char aCharArray[a.first.length()+1];
+    strcpy(aCharArray,a.first.c_str());
+    char bCharArray[b.first.length()+1];
+    strcpy(bCharArray,b.first.c_str());
+
+    for(int i = 0; i < (int)a.first.size(); i++){
+      if(aCharArray[i] != bCharArray[i])
+	return aCharArray[i] < bCharArray[i];
+    }
+    return true;
+  }
   return a.second > b.second;
 }
 
