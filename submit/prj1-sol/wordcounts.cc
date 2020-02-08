@@ -2,13 +2,43 @@
 #include <vector>
 #include <fstream>
 #include <cstring>
+#include <unordered_map>
+#include <algorithm>
+
+typedef int Count;
+typedef std::pair<std::string, Count> WordCount;
+
+bool wordCountCompare(WordCount a, WordCount b){
+  return a.second > b.second;
+}
 
 int main(int argc, char *argv[]) {
-   auto args = std::vector<std::string>(&argv[0], &argv[argc]);
+  auto args = std::vector<std::string>(&argv[0], &argv[argc]);
 
+  if((int) args.size() < 5){
+    std::cout << "usage: ./wordcounts MAX_N_OUT MIN_WORD_LEN MAX_WORD_LEN FILE..."
+	      << std::endl;
+    return 0;
+  }
+
+  if((int)args[1].size() != 1){
+    std::cout << "Bad Integer Value '" << args[1] <<"' for MAX_N_OUT" << std::endl;
+    return 0;
+  }
+  if((int)args[2].size() != 1){
+    std::cout << "Bad Integer Value '" << args[2] <<"' for MIN_WORD_LEN" << std::endl;
+    return 0;
+  }
+  if((int)args[3].size() != 1){
+    std::cout << "Bad Integer Value '" << args[3] <<"' for MAX_WORD_LEN" << std::endl;
+    return 0;
+  }
+  
   const int MAX_N_OUT = std::stoi(args[1]);
   const int MIN_WORD_LEN = std::stoi(args[2]);
   const int MAX_WORD_LEN = std::stoi(args[3]);
+
+  std::unordered_map<std::string, Count> map;
   
   if(MAX_WORD_LEN < MIN_WORD_LEN){
     std::cout << "Max Word Length Is Less Than Minimum Word Length!" << std::endl;
@@ -22,25 +52,41 @@ int main(int argc, char *argv[]) {
   while(in.good()){
     std::string w;
     in >> w;
-    int wordLength = w.length();
-    char charArray[wordLength + 1];
-    strcpy(charArray, w.c_str());
-    std::vector<char> wordChars;
-    for(int i = 0; i < wordLength; i++){
-      char c = charArray[i];
-      if(c > 64 && c < 91)
-	c = tolower(c);
+    if(w != ""){
+      int wordLength = w.length();
+      char charArray[wordLength + 1];
+      strcpy(charArray, w.c_str());
+      std::vector<char> wordChars;
+      for(int i = 0; i < wordLength; i++){
+	char c = charArray[i];
+	if(c > 64 && c < 91)
+	  c = tolower(c);
 
-      if(c > 96 && c < 123)
-	wordChars.push_back(c);
+	if(c > 96 && c < 123)
+	  wordChars.push_back(c);
+      }
+      std::string word(wordChars.begin(), wordChars.end());
+
+      if((int)word.length() >=  MIN_WORD_LEN && (int)word.length() <= MAX_WORD_LEN){
+	Count& count = map[word];
+	count += 1;
+      }
     }
-    std::string word(wordChars.begin(), wordChars.end());
-    std::cout << word << std::endl;
   }
   if(!in.eof()){
-    std::cout << "Error Reading File!" << std::endl;
+    std::cout << "Cannot read " << args[4] <<": No such file exists!" <<  std::endl;
   }
   in.close();
 
+  auto wordCounts = std::vector<WordCount>(map.begin(),map.end());
+  std::sort(wordCounts.begin(), wordCounts.end(), wordCountCompare);
+
+  for(int i = 0; i < MAX_N_OUT; i++){
+    if(i > (int) wordCounts.size()-1){
+      return 0;
+    }
+    std::cout << wordCounts[i].first  << ": " << wordCounts[i].second << std::endl;
+  }
+  
   return 0;
 }
