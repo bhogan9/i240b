@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <cstring>
 
 int main(int argc, char *argv[]) {
    auto args = std::vector<std::string>(&argv[0], &argv[argc]);
@@ -21,10 +22,23 @@ int main(int argc, char *argv[]) {
   while(in.good()){
     std::string w;
     in >> w;
-    std::cout << w << std::endl;
+    int wordLength = w.length();
+    char charArray[wordLength + 1];
+    strcpy(charArray, w.c_str());
+    std::vector<char> wordChars;
+    for(int i = 0; i < wordLength; i++){
+      char c = charArray[i];
+      if(c > 64 && c < 91)
+	c = tolower(c);
+
+      if(c > 96 && c < 123)
+	wordChars.push_back(c);
+    }
+    std::string word(wordChars.begin(), wordChars.end());
+    std::cout << word << std::endl;
   }
   if(!in.eof()){
-    std::cout << "Error Loading File!" << std::endl;
+    std::cout << "Error Reading File!" << std::endl;
   }
   in.close();
 

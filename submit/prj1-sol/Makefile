@@ -1,2 +1,2 @@
 wordcount:
-	g++ -g -Wall -std=c++17 wordcounts.cc -o wordcount
+	g++ -g -Wall -std=c++17 wordcounts.cc -o wordcounts
