@@ -21,17 +21,29 @@ int main(int argc, char *argv[]) {
     return 0;
   }
 
-  if((int)args[1].size() != 1){
-    std::cout << "Bad Integer Value '" << args[1] <<"' for MAX_N_OUT" << std::endl;
-    return 0;
+  char cA[args[1].size()+1];
+  strcpy(cA,args[1].c_str());
+  for(int i = 0; i < (int)args[1].size(); i++){
+    if(!isdigit(cA[i])){
+      std::cout << "Bad Integer Value '" << args[1] <<"' for MAX_N_OUT" << std::endl;
+      return 0;
+    }
   }
-  if((int)args[2].size() != 1){
-    std::cout << "Bad Integer Value '" << args[2] <<"' for MIN_WORD_LEN" << std::endl;
-    return 0;
+  char cB[args[2].size()+1];
+  strcpy(cB,args[2].c_str());
+  for(int i = 0; i < (int)args[2].size(); i++){
+    if(!isdigit(cB[i])){
+      std::cout << "Bad Integer Value '" << args[2] <<"' for MIN_WORD_LEN" << std::endl;
+      return 0;
+    }
   }
-  if((int)args[3].size() != 1){
-    std::cout << "Bad Integer Value '" << args[3] <<"' for MAX_WORD_LEN" << std::endl;
-    return 0;
+  char cC[args[3].size()+1];
+  strcpy(cC,args[3].c_str());
+  for(int i = 0; i < (int)args[3].size(); i++){
+    if(!isdigit(cC[i])){
+      std::cout << "Bad Integer Value '" << args[3] <<"' for MAX_WORD_LEN" << std::endl;
+      return 0;
+    }
   }
   
   const int MAX_N_OUT = std::stoi(args[1]);
@@ -48,36 +60,37 @@ int main(int argc, char *argv[]) {
     return 0;
   }
 
-  std::ifstream in(args[4],std::ifstream::in);
-  while(in.good()){
-    std::string w;
-    in >> w;
-    if(w != ""){
-      int wordLength = w.length();
-      char charArray[wordLength + 1];
-      strcpy(charArray, w.c_str());
-      std::vector<char> wordChars;
-      for(int i = 0; i < wordLength; i++){
-	char c = charArray[i];
-	if(c > 64 && c < 91)
-	  c = tolower(c);
+  for(int i = 4; i < (int)args.size();i++){
+    std::ifstream in(args[i],std::ifstream::in);
+    while(in.good()){
+      std::string w;
+      in >> w;
+      if(w != ""){
+	int wordLength = w.length();
+	char charArray[wordLength + 1];
+	strcpy(charArray, w.c_str());
+	std::vector<char> wordChars;
+	for(int j = 0; j < wordLength; j++){
+	  char c = charArray[j];
+	  if(c > 64 && c < 91)
+	    c = tolower(c);
 
-	if(c > 96 && c < 123)
-	  wordChars.push_back(c);
-      }
-      std::string word(wordChars.begin(), wordChars.end());
+	  if(c > 96 && c < 123)
+	    wordChars.push_back(c);
+	}
+	std::string word(wordChars.begin(), wordChars.end());
 
-      if((int)word.length() >=  MIN_WORD_LEN && (int)word.length() <= MAX_WORD_LEN){
-	Count& count = map[word];
-	count += 1;
+	if((int)word.length() >=  MIN_WORD_LEN && (int)word.length() <= MAX_WORD_LEN){
+	  Count& count = map[word];
+	  count += 1;
+	}
       }
     }
+    if(!in.eof()){
+      std::cout << "Cannot read " << args[4] <<": No such file exists!" <<  std::endl;
+    }
+    in.close();
   }
-  if(!in.eof()){
-    std::cout << "Cannot read " << args[4] <<": No such file exists!" <<  std::endl;
-  }
-  in.close();
-
   auto wordCounts = std::vector<WordCount>(map.begin(),map.end());
   std::sort(wordCounts.begin(), wordCounts.end(), wordCountCompare);
 
