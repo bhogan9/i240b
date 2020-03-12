@@ -1,0 +1,12 @@
+4-quoting
+bin-c.log
+cat
+cat.log
+dir
+file.txt
+ls.log
+t1.c
+T1.s
+v1.s
+v.c
+x.c
