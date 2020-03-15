@@ -5,7 +5,7 @@
 #include "arrayseq.hh"
 using TestType = int;
 
-void readInts(std::string fileName, Seq<TestType>& rawPointer){
+void readInts(std::string fileName, Seq<TestType>& seq){
   TestType i;
   std::ifstream in(fileName);
   if(!in){
@@ -13,7 +13,7 @@ void readInts(std::string fileName, Seq<TestType>& rawPointer){
   }
   while(in >> i){
     std::cout << i << std::endl;
-    rawPointer.push(i);
+    seq.push(i);
   }
   if(!in.eof()){
     //ERROR
@@ -40,4 +40,6 @@ int main(int argc, char **argv){
   }
   Seq<TestType>* rawPointer = ArraySeq<TestType>::make().get();  
   readInts(fileName, *rawPointer);
+  delete(rawPointer);
 }
+
