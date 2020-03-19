@@ -11,6 +11,7 @@ void readInts(std::string fileName, Seq<TestType>& rawPointer){
   if(!in){
     //ERROR
   }
+
   while(in >> i){
     std::cout << i << std::endl;
     rawPointer.push(i);
