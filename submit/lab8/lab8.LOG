@@ -1,0 +1,878 @@
+Script started on 2020-03-26 17:49:27-04:00 [TERM="xterm" TTY="/dev/pts/8" COLUMNS="117" LINES="62"]
+bhogan9@remote00:~/i240b/submit/lab8$ cp -r ~/cs`[K240/labs/lab8/
+exercises/ lab8/      lab8.html  lab8.pdf   lab8.umt   
+bhogan9@remote00:~/i240b/submit/lab8$ cp -r ~/cs240/labs/lab8/exercises/.[K[K .
+bhogan9@remote00:~/i240b/submit/lab8$ ls
+exercises  lab8.LOG
+bhogan9@remote00:~/i240b/submit/lab8$ emacs e[K[K[K[K[K[K[Kcd exercises/
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ ls
+3-subshells
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ env
+SHELL=/bin/bash
+DERBY_HOME=/usr/lib/jvm/java-8-oracle/db
+JAVA_HOME=/usr/lib/jvm/java-8-oracle
+KRB5CCNAME=FILE:/tmp/krb5cc_14373_BC3wrSVS9m
+PWD=/home/bhogan9/i240b/submit/lab8/exercises
+LOGNAME=bhogan9
+XDG_SESSION_TYPE=tty
+J2REDIR=/usr/lib/jvm/java-8-oracle/jre
+VIRTUALENVWRAPPER_SCRIPT=/usr/share/virtualenvwrapper/virtualenvwrapper.sh
+HOME=/home/bhogan9
+LANG=en_US.UTF-8
+_VIRTUALENVWRAPPER_API= mkvirtualenv rmvirtualenv lsvirtualenv showvirtualenv workon add2virtualenv cdsitepackages cdvirtualenv lssitepackages toggleglobalsitepackages cpvirtualenv setvirtualenvproject mkproject cdproject mktmpenv
+SSH_CONNECTION=74.69.22.240 51880 128.226.114.200 22
+XDG_SESSION_CLASS=user
+TERM=xterm
+J2SDKDIR=/usr/lib/jvm/java-8-oracle
+USER=bhogan9
+SHLVL=2
+XDG_SESSION_ID=100997
+CLASSPATH=.:/home/bhogan9/cs240/lib
+LD_LIBRARY_PATH=.:/home/bhogan9/cs240/lib
+XDG_RUNTIME_DIR=/run/user/14373
+SSH_CLIENT=74.69.22.240 51880 22
+PATH=/home/bhogan9/cs240/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/14373/bus
+MAIL=/var/mail/bhogan9
+SSH_TTY=/dev/pts/8
+OLDPWD=/home/bhogan9/i240b/submit/lab8
+_=/usr/bin/env
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ echo $home
+
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ m[Kecho $PATH
+/home/bhogan9/cs240/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ echo $PATH[K[K[K[KHOME
+/home/bhogan9
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ ech0o[K[Ko $xxx
+
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ xxx=123
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ echo $xxx
+123
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ env | grep xxx
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ export xxxeeee[K[K[K[K[Kx
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ export xxx[4@nv | grep[C[C[C[C
+xxx=123
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ env | grep xxx[C[C[4Pxport[C[C[C[C[K=456
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ export xx=456nv | grep xxx[K
+xxx=123
+xx=456
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ p=$PATH
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ ex[Kcho $PATH
+/home/bhogan9/cs240/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ echo $PATH[K[K[K[Kp
+/home/bhogan9/cs240/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ $PATH="[K""
+bash: /home/bhogan9/cs240/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin=: No such file or directory
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ $PATH=""[K[K
+bash: /home/bhogan9/cs240/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin=: No such file or directory
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ $PATH=[C[1PPATH=
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ echo $PATH
+
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ ls
+bash: ls: No such file or directory
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ PATH=$P[Kp
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ ls
+3-subshells
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ ls ; wc *
+3-subshells
+wc: 3-subshells: Is a directory
+      0       0       0 3-subshells
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ find -L ~/cs240 -name '*.c'
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ find -L ~/cs240 -name '*.c' | wc -l
+0
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ find -L ~/cs240 -name '*.c' | wc -l[C[K[K[K[K[K[K[K[K 2>de[K[K/dev/null [C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[1@ [1@/[C[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C > c - f i l e s . l s t [C & 
+[1] 2270262
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ cat [K[K[K[Kls -l c-files.lst 
+-rw-r----- 1 bhogan9 bhogan9 21119 Mar 26 18:03 c-files.lst
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ ls -l c-files.lst 
+-rw-r----- 1 bhogan9 bhogan9 192076 Mar 26 18:03 c-files.lst
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ ls -l c-files.lst 
+-rw-r----- 1 bhogan9 bhogan9 228017 Mar 26 18:03 c-files.lst
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ ls -l c-files.lst 
+-rw-r----- 1 bhogan9 bhogan9 244401 Mar 26 18:03 c-files.lst
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ ls -l c-files.lst 
+-rw-r----- 1 bhogan9 bhogan9 244401 Mar 26 18:03 c-files.lst
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ ls -l c-files.lst 
+-rw-r----- 1 bhogan9 bhogan9 252593 Mar 26 18:03 c-files.lst
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ ls -l c-files.lst 
+-rw-r----- 1 bhogan9 bhogan9 252593 Mar 26 18:03 c-files.lst
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ jobs
+[1]+  Running                 find / -name '*.c' 2> /dev/null > c-files.lst &
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ koll[K[K[Kill %1
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ cd ~
+[1]+  Terminated              find / -name '*.c' 2> /dev/null > c-files.lst  (wd: ~/i240b/submit/lab8/exercises)
+(wd now: ~)
+bhogan9@remote00:~$ pwd
+/home/bhogan9
+bhogan9@remote00:~$ xx==[K123
+bhogan9@remote00:~$ pwd; echo $xx; (xx==[Kabc; cd /; pwd; echo $xx); pwd; echo $xx
+/home/bhogan9
+123
+/
+abc
+/home/bhogan9
+123
+bhogan9@remote00:~$ cd i`[K240b/submit/lab8/exercises/3-subshells/
+bhogan9@remote00:~/i240b/submit/lab8/exercises/3-subshells$ ls
+Makefile
+bhogan9@remote00:~/i240b/submit/lab8/exercises/3-subshells$ make
+cd ~/cs240
+ls
+Makefile
+bhogan9@remote00:~/i240b/submit/lab8/exercises/3-subshells$ emacs Makefile
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[62d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[61d[?25l[7m-UUU:----F1  [0m[39;49m[27m[7m[1m*scratch*   [0m[39;49m[27m[7m   All L1     (Fundamental) ----------------------------------------------------------------[0m[39;49m[27m
+[A[2d[?12l[?25h[?12;25h[62d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[62;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[62;54H[?25ldone[H
+[?12l[?25h[?12;25h[62;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[62;59H[?25ldone[H
+[?12l[?25h[?12;25h[62;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[62;58H[?25ldone[H
+[?12l[?25h[?12;25h[62;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[62;60H[?25ldone[H
+[?12l[?25h[?12;25h[62;35H[?25ldictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[62;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[62;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[62;77H[?25ldone[H
+[?12l[?25h[?12;25h[62;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[62;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[62;75H[?25ldone[H
+[?12l[?25h[?12;25h[62;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[62;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[62;61H[?25ldone[H
+[?12l[?25h[?12;25h[62;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[62;10H[?25lusr/share/emacs/site-lisp/elpa/haskel[34@l-mode-16.1/haskell-mode-autoloads[H
+[?12l[?25h[?12;25h[62;96H[?25ldone[H
+[?12l[?25h[?12;25h[62;10H[?25letc/emacs/site-start.d/50haskell-mode[34P[H
+[?12l[?25h[?12;25h[62;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[62;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[62;75H[?25ldone[H
+[?12l[?25h[?12;25h[62;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[62;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[62;64H[?25ldone[H
+[?12l[?25h[?12;25h[62;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[62;54H[?25ldone[H
+[?12l[?25h[?12;25h[62;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[62;65H[?25ldone[H
+[?12l[?25h[?12;25h[62;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[62;54H[?25ldone[H
+[?12l[?25h[?12;25h[62;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[62;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[62d[?25lLoading /etc/emacs/site-start.d/50texlive-lang-english.el (source)...done[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                                                [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[7m-UUU:----F1  [0m[39;49m[27m[7m[1m*scratch*   [0m[39;49m[27m[7m   All L1     (Lisp Interaction ElDoc) 6:07PM 0.15 -----------------------------------------[0m[39;49m[27m
+[A[2d[?12l[?25h[?12;25h[?2004h[62d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H
+[?12l[?25h[?12;25h[62d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Makefile Help                                                                        [0m[39;49m[27m
+[A
+[1m[34mall[0m[39;49m:[K
+                cd ~/cs240[K
+                ls[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[7m-UU-:----F1  [0m[39;49m[27m[7m[1mMakefile    [0m[39;49m[27m[7m   All L1     (GNUmakefile) 6:07PM 0.15 ----------------------------------------------------[0m[39;49m[27m
+[A[2d[?12l[?25h[?12;25h[62d[K[61;34H[?25l[7m2[0m[39;49m[27m[H
+
+[?12l[?25h[?12;25h[61;34H[?25l[7m1[0m[39;49m[27m[2;5H[?12l[?25h[?12;25h[61;34H[?25l[7m2[0m[39;49m[27m[H
+
+[?12l[?25h[?12;25h[61;34H[?25l[7m3[0m[39;49m[27m[4;1H[?12l[?25h[?12;25h[61;34H[?25l[7m2[0m[39;49m[27m[3;27H[?12l[?25h[?12;25h[?25l;[61;6H[7m**[0m[39;49m[27m[3;28H[?12l[?25h[?12;25h[62;1H[?25lSaving file /home/bhogan9/i240b/submit/lab8/exercises/3-subshells/Makefile...[3;28H[?12l[?25h[?12;25h[62;1H[?25lWrote /home/bhogan9/i240b/submit/lab8/exercises/3-subshells/Makefile[K[3;28H[?12l[?25h[?12;25h[61;6H[?25l[7m--[0m[39;49m[27m[3;28H[?12l[?25h[?12;25h[62;1H[K[3;28H[62;1H[K[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mbhogan9@remote00:~/i240b/submit/lab8/exercises/3-subshells$ make
+cd ~/cs240;
+ls
+Makefile  Makefile~
+bhogan9@remote00:~/i240b/submit/lab8/exercises/3-subshells$ emcas [K[K[K[Kacs Makefil;[Ke
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[62d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[61d[?25l[7m-UUU:----F1  [0m[39;49m[27m[7m[1m*scratch*   [0m[39;49m[27m[7m   All L1     (Fundamental) ----------------------------------------------------------------[0m[39;49m[27m
+[A[2d[?12l[?25h[?12;25h[62d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[62;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[62;54H[?25ldone[H
+[?12l[?25h[?12;25h[62;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[62;59H[?25ldone[H
+[?12l[?25h[?12;25h[62;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[62;58H[?25ldone[H
+[?12l[?25h[?12;25h[62;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[62;60H[?25ldone[H
+[?12l[?25h[?12;25h[62;35H[?25ldictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[62;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[62;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[62;77H[?25ldone[H
+[?12l[?25h[?12;25h[62;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[62;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[62;75H[?25ldone[H
+[?12l[?25h[?12;25h[62;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[62;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[62;61H[?25ldone[H
+[?12l[?25h[?12;25h[62;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[62;10H[?25lusr/share/emacs/site-lisp/elpa/haskel[34@l-mode-16.1/haskell-mode-autoloads[H
+[?12l[?25h[?12;25h[62;96H[?25ldone[H
+[?12l[?25h[?12;25h[62;10H[?25letc/emacs/site-start.d/50haskell-mode[34P[H
+[?12l[?25h[?12;25h[62;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[62;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[62;75H[?25ldone[H
+[?12l[?25h[?12;25h[62;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[62;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[62;64H[?25ldone[H
+[?12l[?25h[?12;25h[62;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[62;54H[?25ldone[H
+[?12l[?25h[?12;25h[62;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[62;65H[?25ldone[H
+[?12l[?25h[?12;25h[62;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[62;54H[?25ldone[H
+[?12l[?25h[?12;25h[62;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[62;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[62d[?25lLoading /etc/emacs/site-start.d/50texlive-lang-english.el (source)...done[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                                                [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[7m-UUU:----F1  [0m[39;49m[27m[7m[1m*scratch*   [0m[39;49m[27m[7m   All L1     (Lisp Interaction ElDoc) 6:08PM 0.11 -----------------------------------------[0m[39;49m[27m
+[A[2d[?12l[?25h[?12;25h[?2004h[62d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H
+[?12l[?25h[?12;25h[62d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Makefile Help                                                                        [0m[39;49m[27m
+[A
+[1m[34mall[0m[39;49m:[K
+                cd ~/cs240;[K
+                ls[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[7m-UU-:----F1  [0m[39;49m[27m[7m[1mMakefile    [0m[39;49m[27m[7m   All L1     (GNUmakefile) 6:08PM 0.11 ----------------------------------------------------[0m[39;49m[27m
+[A[2d[?12l[?25h[?12;25h[62d[K[61;34H[?25l[7m2[0m[39;49m[27m[H
+
+[?12l[?25h[?12;25h[61;34H[?25l[7m3[0m[39;49m[27m[4;1H[?12l[?25h[?12;25h[61;34H[?25l[7m2[0m[39;49m[27m[H
+
+[?12l[?25h[?12;25h[61;34H[?25l[7m3[0m[39;49m[27m[4;1H[?12l[?25h[?12;25h		[C[C[61;34H[?25l[7m4[0m[39;49m[27m[5;1H[?12l[?25h[?12;25h[61;34H[?25l[7m3[0m[39;49m[27m[4;19H[?12l[?25h[?12;25h[C[62;1H[?25lNo matching parenthesis found[4;19H[?12l[?25h[?12;25h[?25l)[61;6H[7m**[0m[39;49m[27m[4;20H[?12l[?25h[?12;25h[62;1H[K[4;19H[K[K[?25l[45m                [39;49m[K[?12l[?25h[?12;25h	[K[K[61;34H[?25l[7m2[0m[39;49m[27m[3;28H[?12l[?25h[?12;25h[C[?25ll[?12l[?25h[?12;25h[?25ls[?12l[?25h[?12;25h[61;57H[?25l[7m9PM 0.17[0m[39;49m[27m[3;31H[?12l[?25h[?12;25h[62;1H[?25lSaving file /home/bhogan9/i240b/submit/lab8/exercises/3-subshells/Makefile...[3;31H[?12l[?25h[?12;25h[62;1H[?25lWrote /home/bhogan9/i240b/submit/lab8/exercises/3-subshells/Makefile[K[3;31H[?12l[?25h[?12;25h[61;6H[?25l[7m--[0m[39;49m[27m[3;31H[?12l[?25h[?12;25h[62;1H[K[3;31H[62;1H[K[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mbhogan9@remote00:~/i240b/submit/lab8/exercises/3-subshells$ Make[K[K[K[Kmake
+cd ~/cs240; ls
+announce.html  assets  docs	      exercises  index.html  labs  online    README.md	umt.make
+announce.umt   bin     exams-quizzes  hws	 index.umt   misc  projects  slides
+bhogan9@remote00:~/i240b/submit/lab8/exercises/3-subshells$ cd ..
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ grep -i 'MAIN(' `find ~/cs240/projects/ -name '*.cc'`
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:main(int argc, char *argv[])
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:int main(int argc, char *argv[]) {
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ grep -i 'MAIN(' `find ~/cs240/projects/ -name '*.cc'` | wc -l
+2
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ grep -i ''*'[C `fine[Kd -L[K[K~/cs240/projects/ -name '.[K*.cc'`
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:main(int argc, char *argv[])
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      *((i == 0) ? &repeat : &value) = std::stoi(arg);
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:using OperateFn = TestType(Seq<TestType> *seq);
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:/** return a |-separated string of names of all supported sequences */
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:/** Returns a raw pointer to the sequence specified by seqName. */
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:static Seq<TestType>*
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:int main(int argc, char *argv[]) {
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  Seq<TestType>* seq = getSeqContainer(argv[1]);
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:    Command command(*seq, in, out, err);
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ grep -i '*' `find ~/cs240/projects/ -name '*.cc'`[C[C[C[1P
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:#include <algorithm>
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:#include <cassert>
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:#include <cerrno>
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:#include <iostream>
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:#include <fstream>
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:#include <locale>
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:#include <string>
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:#include <cstring>
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:#include <utility>
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:#include <vector>
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:#include <unordered_map>
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:typedef std::size_t Count;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:typedef std::pair<std::string, Count> WordCount;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:static bool wordCountCompare(const WordCount& wn1, const WordCount& wn2) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  return (wn1.second > wn2.second) ||
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    (wn1.second == wn2.second && wn1.first < wn2.first);
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:}
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:static std::string
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:lcSubSeq(std::string s) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  std::string result;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  for (char c : s) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    if (std::isalpha(c)) result.push_back(std::tolower(c));
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  return result;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:}
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:static std::size_t
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:getPositiveInt(std::string value, std::string label="")
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:{
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  std::size_t end;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  int i = std::stoi(value, &end);
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  if (end != value.length() || i <= 0) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    const std::string msg =
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      std::string("bad integer value \"") + value + "\"" +
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      ((label.length() > 0) ? std::string(" for ") + label : "");
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    throw std::invalid_argument(msg);
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  return i;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:}
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:#if 0
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:static std::unordered_map<std::string, Count>
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:readWordsAlt(std::size_t minWordLen, std::size_t maxWordLen,
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:	     std::vector<std::string> files)
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:{
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  std::unordered_map<std::string, Count> map;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  for (std::string file : files) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    std::ifstream in(file);
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    if (!in) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      throw std::invalid_argument(std::string("cannot read ") + file +
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:				  ": " + std::strerror(errno));
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    std::string w;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    while (in >> w) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      std::string w1 = lcSubSeq(w);
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      std::size_t len = w1.length();
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      if (minWordLen <= len && len <= maxWordLen) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:	Count& count = map[w1];
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:	count += 1;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    } //while
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    if (!in.eof()) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      throw std::invalid_argument(std::string("error reading ") + file +
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:				  ": " + std::strerror(errno));
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    in.close();
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  return map;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:}
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:#endif
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:static std::unordered_map<std::string, Count>
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:readWords(std::size_t minWordLen, std::size_t maxWordLen,
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:	  std::vector<std::string> files)
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:{
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  std::unordered_map<std::string, Count> map;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  for (std::string file : files) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    std::ifstream in(file);
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    while (in.good()) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      std::string w;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      in >> w;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      std::string w1 = lcSubSeq(w);
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      std::size_t len = w1.length();
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      if (minWordLen <= len && len <= maxWordLen) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:	Count& count = map[w1];
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:	count += 1;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    } //while
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    if (!in.eof()) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      throw std::invalid_argument(std::string("cannot read ") + file +
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:				  ": " + std::strerror(errno));
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    in.close();
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  return map;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:}
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:static void
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:report(std::size_t maxNOut, std::unordered_map<std::string, Count> map)
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:{
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  std::vector<WordCount> wordCounts(map.begin(), map.end());
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  sort(wordCounts.begin(), wordCounts.end(), wordCountCompare);
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  for (auto cursor = wordCounts.begin(); cursor < wordCounts.begin() + maxNOut;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:       cursor++) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    std::cout << cursor->first << ": " << cursor->second << std::endl;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:}
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:static void
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:go(std::vector<std::string> argv)
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:{
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  const std::size_t maxNOut = getPositiveInt(argv[1], "MAX_N_OUT");
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  const std::size_t  minWordLen = getPositiveInt(argv[2], "MIN_WORD_LEN");
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  const std::size_t  maxWordLen = getPositiveInt(argv[3], "MAX_WORD_LEN");
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  if (minWordLen > maxWordLen) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    const std::string msg =
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      std::string("MIN_WORD_LEN ") + argv[2] +
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      " is greater than MAX_WORD_LEN " + argv[3];
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    throw std::invalid_argument(msg);
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  auto fileNames = std::vector<std::string>(argv.begin() + 4, argv.end());
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  const std::unordered_map<std::string, Count> map =
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    readWords(minWordLen, maxWordLen, fileNames);
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  report(maxNOut, map);
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  // for (auto cursor = map.begin(); cursor != map.end(); cursor++) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  //   std::cout << cursor->first << ": " << cursor->second << std::endl;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  // }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:}
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:static void
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:usage(std::string progName) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  std::cerr << "usage: "
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:	    << progName
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:	    << " MAX_N_OUT MIN_WORD_LEN MAX_WORD_LEN FILE..."
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:	    << std::endl;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:}
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:int
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:main(int argc, char *argv[])
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:{
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  try {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    if (argc < 5) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      usage(argv[0]);
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    else {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:      go(std::vector<std::string>(argv, &argv[argc]));
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  catch (const std::exception& err) {
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:    std::cerr << err.what() << std::endl;
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:  }
+/home/bhogan9/cs240/projects/prj1-sol/wordcounts.cc:}
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:#include <cctype>
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:#include <cstdlib>
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:#include <iostream>
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:#include <memory>
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:#include <sstream>
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:#include <string>
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:#include <unordered_map>
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:#include <utility>
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:#include "command.hh"
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:static int
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:skipLinearSpace(std::istream& in) {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  int c;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  while ((c = in.peek()) == ' ' || c == '\t') {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    in.get();
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  }
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  return c;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:}
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:Command::Command(Seq<TestType>& seq, std::istream& in,
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:		 std::ostream& out, std::ostream& err)
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  : seq(seq), in(in), out(out), err(err)
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:{
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  getArgs();
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:}
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:bool Command::isEof() { return command == "EOF"; }
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:void Command::getArgs() {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  command = "";
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  repeat = 1;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  value = 0;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  const int maxArgs = 3;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  int c = skipLinearSpace(in);
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  for (int i = 0; i < maxArgs; i++) {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    if (c == '\n' || c == EOF) break;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    std::string arg;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    in >> arg;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    if (std::isdigit(arg[0])) {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      *((i == 0) ? &repeat : &value) = std::stoi(arg);
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    }
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    else {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      command = arg;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    }
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    c = skipLinearSpace(in);
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  }
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  if (c == '\n') in.get();
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  if (c == EOF) command = "EOF";
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:}
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:using OperateFn = TestType(Seq<TestType> *seq);
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:enum class CommandType {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  CLEAR, PUSH, POP, SHIFT, UNSHIFT, HELP, ERROR
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:};
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:struct CommandDef {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  std::string command;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  CommandType type;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:};
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:static const CommandDef COMMANDS[] = {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  { "clear", CommandType::CLEAR },
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  { "unshift", CommandType::UNSHIFT },
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  { "shift", CommandType::SHIFT },
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  { "push", CommandType::PUSH },
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  { "pop", CommandType::POP },
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  { "help", CommandType::HELP },
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:};
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:static int N_COMMANDS = sizeof(COMMANDS)/sizeof(COMMANDS[0]);
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:static CommandType
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:getCommandType(std::string command) {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  for (int i = 0; i < N_COMMANDS; i++) {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    if (COMMANDS[i].command == command) return COMMANDS[i].type;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  }
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  return CommandType::ERROR;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:}
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:void Command::help(std::ostream& out) {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  out << "[REPEAT] COMMAND [VALUE]" << std::endl
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      << "COMMAND is one of ";
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  for (int i = 0; i < N_COMMANDS; ++i) {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    out << COMMANDS[i].command;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    if (i < N_COMMANDS - 1) out << "|";
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  }
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  out << std::endl;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:}
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:void Command::run() {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  if (command == "" || command == "EOF") return;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  CommandType type = getCommandType(command);
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  for (int i = 0; i < repeat; i++) {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    switch (type) {
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    case CommandType::CLEAR:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      seq.clear();
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      break;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    case CommandType::UNSHIFT:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      seq.unshift(value);
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      break;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    case CommandType::SHIFT:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      out << seq.shift() << std::endl;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      break;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    case CommandType::PUSH:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      seq.push(value);
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      break;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    case CommandType::POP:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      out << seq.pop() << std::endl;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      break;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    case CommandType::HELP:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      help(out);
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      break;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    default:
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:      err << "bad command \"" << command << "\"" << std::endl;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:    }
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  }
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:  out << seq << std::endl;
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:}
+/home/bhogan9/cs240/projects/prj2/extras/command.cc:
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:#include "arrayseq.hh"
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:#include "command.hh"
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:#include "dlinkseq.hh"
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:#include "seq.hh"
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:#include <cctype>
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:#include <cstdlib>
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:#include <iostream>
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:#include <memory>
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:#include <string>
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:#include <utility>
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc://pair mapping sequence name to sequence instance
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:struct NameToSeq {
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  const std::string name;
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  const SeqPtr<TestType> seq;  //smart pointer to sequence
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:};
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc://this structure keeps track of smart pointers to sequences, ensuring
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc://that the sequences will automatically be cleaned up on program exit.
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:static const NameToSeq nameSeqMap[] = {
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  { "ArraySeq", ArraySeq<TestType>::make() },
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  { "DLinkSeq", DLinkSeq<TestType>::make() },
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:};
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:static const int nSeqs = sizeof(nameSeqMap)/sizeof(nameSeqMap[0]);
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:/** return a |-separated string of names of all supported sequences */
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:static std::string makeNames() {
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  std::string names = "";
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  for (int i = 0; i < nSeqs; ++i) {
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:    const auto nameToSeqP = &nameSeqMap[i];
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:    if (names.length() > 0) names += "|";
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:    names += nameToSeqP->name;
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  }
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  return names;
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:}
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:static const std::string names = makeNames();
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:/** Returns a raw pointer to the sequence specified by seqName. */
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:static Seq<TestType>*
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:getSeqContainer(const std::string seqName) {
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  for (int i = 0; i < nSeqs; ++i) {
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:    const auto nameToSeqP = &nameSeqMap[i];
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:    //get() on unique pointer returns underlying raw pointer
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:    if (nameToSeqP->name == seqName) return nameToSeqP->seq.get();
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  }
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  std::cerr << "invalid container " << seqName
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:	    << "; must be one of " << names << std::endl;
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  std::exit(1);
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:}
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:static void prompt(std::ostream& out) { out << ">> " << std::flush; }
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:int main(int argc, char *argv[]) {
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  if (argc < 2) {
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:    std::cerr << "usage: " << argv[0] << " " << names << std::endl;
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:    std::exit(1);
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  }
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  Seq<TestType>* seq = getSeqContainer(argv[1]);
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  std::istream& in = std::cin;
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  std::ostream& out = std::cout;
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  std::ostream& err = std::cerr;
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  Command::help(out);
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  do {
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:    prompt(out);
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:    //note that since Seq is abstract, command takes a Seq& argument
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:    Command command(*seq, in, out, err);
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:    if (command.isEof()) break;
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:    command.run();
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:  } while (true);
+/home/bhogan9/cs240/projects/prj2/extras/seq-test.cc:}
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ grep -i '' `find ~/cs240/projects/ -name '*.cc'` | wc -l
+354
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ echo $?
+0
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ false [K; echo 123
+123
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ r[Ktrye[K[Kuel [K[K; echo 123
+123
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ flase[K[K[K[Kalse && echo 123
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ false && echo 123[1P[1P[1P[1P[1P[1@t[1@r[1@u[1@e
+123
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ flase[K[K[K[Kalse || echo123[K[K[K 123
+123
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ false || echo 123[C[C[C[1P[1P[1P[1P[1P[1@t[1@r[1@u[1@e
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ true || echo 123[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K(sleep 5; echp[Ko 123)
+123
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ (sleep 5; echo 123)[C[C[1@ [1@&
+bash: syntax error near unexpected token `;'
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ (sleep 5 &; echo 123)[1P
+123
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ (sleep 5 & echo 123)[C[C[1@ [1@&[1@&
+bash: syntax error near unexpected token `&&'
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ (sleep 5 & && echo 123)[K[C[1P
+bash: syntax error near unexpected token `&&'
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ sleep 5 & && echo 123[C[1P[1P
+[1] 2291835
+123
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ sleep 5 &  echo 123[1@\[1P[1@|[1@|[C[1@ 
+bash: syntax error near unexpected token `||'
+[1]+  Done                    sleep 5
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ sleep 5 & ||  echo 123[C[1P[1P[C[1@&[1@&[C[1@)[1@(
+123
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ (sleep 5 &) &&  echo 123[1P[1P[1P[C[1@ [1@;[C[C[C[C[C[C[C[C[C[C[C[C[C) &
+bash: syntax error near unexpected token `&&'
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ (sleep 5 ; &&  echo 123) &[C[1P[1P[1P[1P
+[1] 2298559
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ 123
+d[K
+[1]+  Done                    ( sleep 5; echo 123 )
+bhogan9@remote00:~/i240b/submit/lab8/exercises$ exit
+
+Script done on 2020-03-26 18:26:32-04:00 [COMMAND_EXIT_CODE="0"]

@@ -51,8 +51,8 @@ public:
   
   /** add item at the end of this seq. */
   void push(const E& item) {
-    assert(index < maxSize && "arrayseq overflow");
-    seq[index++] = item;
+    //    assert(index < maxSize && "arrayseq overflow");
+    //    seq[index++] = item;
   }
   
   /** remove and return first item from this seq. 

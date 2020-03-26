@@ -11,16 +11,17 @@ void readInts(std::string fileName, Seq<TestType>& seq){
   if(!in){
     //ERROR
   }
+
   while(in >> i){
     std::cout << i << std::endl;
-    seq.push(i);
+    seq.push(1);
   }
   if(!in.eof()){
     //ERROR
   }
 }
 
-int main(int argc, char **argv){
+int main(int argc, char *argv[]){
   //If not enough arguments
   if(argc < 2){
     std::cout << "usage: ./nums [-a] INTS_FILE_PATH" << std::endl;
@@ -38,8 +39,8 @@ int main(int argc, char **argv){
   }else{
     fileName = argv[1];
   }
-  Seq<TestType>* rawPointer = ArraySeq<TestType>::make().get();  
+  Seq<TestType> *rawPointer = ArraySeq<TestType>::make().get();  
   readInts(fileName, *rawPointer);
-  delete(rawPointer);
+  //delete(rawPointer);
 }
 
