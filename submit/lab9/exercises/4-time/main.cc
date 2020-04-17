@@ -76,7 +76,7 @@ getSort(std::string name)
   std::exit(1);
 }
 
-/** Output a line containing whitespace separated contents of a [0, n)
+Output a line containing whitespace separated contents of a [0, n)
 static void
 outArray(int a[], int n)
 {
@@ -84,7 +84,7 @@ outArray(int a[], int n)
     std::cout << a[i] << " ";
   }
   std::cout << std::endl;
-  }*/
+}
 
 
 static void
@@ -97,7 +97,7 @@ go(SortP sort, std::string filePath, bool isVerbose, int nRead)
   sort(a, n);
   long t1 = now();
   auto time = t1-t0;
-  //if (isVerbose) outArray(a, n);
+  if (isVerbose) outArray(a, n);
   std::cout << n << "\t" << time << std::endl; 
 }
 
